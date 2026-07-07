@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}.log-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.log-page h1 {
+  margin-bottom: 30px;
+}
+
+.log-page section {
+  margin-bottom: 50px;
+}
+
+.log-page h2 {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.media {
+  margin-bottom: 30px;
+}
+
+.media img,
+.media video {
+  max-width: 700px;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+}
+
+.media p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 8px 14px;
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+  text-decoration-thickness: 1px;
+}
+
+.links a:hover {
+  opacity: 0.7;
+}
+
+.back-link {
+  margin-bottom: 30px;
+}
+
+.back-link a {
+  text-decoration: none;
+}
+
+.log-text {
+  max-width: 700px;
+  margin: 24px 0;
+  line-height: 1.8;
+  color: #444;
+  white-space: pre-line;
+}
