@@ -23,8 +23,8 @@ export const backlogs = [
     },
     {   title:"TODOをメモする場所がほしい",
         category:"Web",
-        done:false,
-        link: {name:"",value:""}
+        done:true,
+        link: {name:"BackLogページを作成した",value:""}
     },
     {   title:"devとworkでテンプレ分ける",
         category:"Web",
@@ -52,11 +52,6 @@ export const backlogs = [
         link: {name:"",value:""}
     },
     {   title:"AWSにデプロイ",
-        category:"Web",
-        done:false,
-        link: {name:"",value:""}
-    },
-    {   title:"DB化する",
         category:"Web",
         done:false,
         link: {name:"",value:""}
