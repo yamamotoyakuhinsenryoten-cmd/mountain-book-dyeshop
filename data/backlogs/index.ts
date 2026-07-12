@@ -28,8 +28,8 @@ export const backlogs = [
     },
     {   title:"devとworkでテンプレ分ける",
         category:"Web",
-        done:false,
-        link: {name:"",value:""}
+        done:true,
+        link: {name:"テンプレ分けた",value:""}
     },
     {   title:"サイト作成（デプロイまで）のログ作る",
         category:"Web",
@@ -67,6 +67,11 @@ export const backlogs = [
         link: {name:"",value:""}
     },
     {   title:"サイトマップとかコンセプトとかのページほしい",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+        {   title:"work / devでデータ構造を分ける。",
         category:"Web",
         done:false,
         link: {name:"",value:""}

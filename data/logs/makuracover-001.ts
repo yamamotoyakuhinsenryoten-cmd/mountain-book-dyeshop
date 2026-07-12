@@ -1,10 +1,12 @@
 export const makuracover001 =  {
     slug: "makuracover-001",
+    type:"work",
     title: "枕カバーづくり #1",
     category: "縫物",
     thumbnail: "/logs/makuracover-001/IMG_2188.jpg",
     date: "2026-05-19",
     summary: "自分で染めた生地を使って枕カバーをつくった",
+    text:``,
 
     info: [{label:"生地",value:"コーヒー染めしたダブルガーゼ"},
       {label:"レシピ",value:"nunocoto fabricさん"},
