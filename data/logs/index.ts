@@ -12,6 +12,7 @@ import { drawstringbag001 } from "./drawstringbag-001";
 import { jinbei001 } from "./jinbei-001";
 import { makuracover001 } from "./makuracover-001";
 import { aroha001 } from "./aroha-001";
+import { fixImageCase } from "./fix-imagecase";
 
 
 
@@ -29,6 +30,7 @@ export const logs = [
   aroha001,
   coffeeZome001,
   coffeeZome002,
-  coffeeZome003
+  coffeeZome003,
+  fixImageCase
   
 ];

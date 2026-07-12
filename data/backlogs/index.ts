@@ -3,8 +3,8 @@ import { title } from "process";
 export const backlogs = [
     {   title:"表示されない画像がある",
         category:"Web",
-        done:false,
-        link: {name:"",value:""}
+        done:true,
+        link: {name:"画像拡張子を小文字化",value:"/logs/fix-imagecase"}
     },
     {   title:"表示に時間がかかる",
         category:"Web",
