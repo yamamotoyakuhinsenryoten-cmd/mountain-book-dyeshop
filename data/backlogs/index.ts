@@ -61,4 +61,14 @@ export const backlogs = [
         done:false,
         link: {name:"",value:""}
     },
+        {   title:"APIつくってみる",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+    {   title:"サイトマップとかコンセプトとかのページほしい",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
 ];
