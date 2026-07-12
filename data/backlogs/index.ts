@@ -36,4 +36,34 @@ export const backlogs = [
         done:false,
         link: {name:"",value:""}
     },
+        {   title:"サイト内ナビゲーションを整理する",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+    {   title:"サイトロゴを考える",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+    {   title:"summary消す",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+    {   title:"AWSにデプロイ",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+    {   title:"DB化する",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+    {   title:"DB化する",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
 ];

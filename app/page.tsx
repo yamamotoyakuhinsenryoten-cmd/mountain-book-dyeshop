@@ -5,9 +5,7 @@ export default function Home() {
         <h1 className="text-3xl md:text-4xl">山本薬品染料店</h1>
 
         <p className="text-sm text-neutral-600 leading-relaxed">
-          染めと制作の作業場。
-          <br />
-          完成品ではなく、途中の記録を置いていく場所。
+          いらっしゃいませ
         </p>
 
         {/* <a
@@ -20,7 +18,19 @@ export default function Home() {
           href="/logs"
           className="inline-block border border-neutral-900 px-4 py-2 text-sm hover:bg-neutral-900 hover:text-white transition"
         >
-          ログ一覧
+          Logs
+        </a>
+        <a
+          href="/backlogs"
+          className="inline-block border border-neutral-900 px-4 py-2 text-sm hover:bg-neutral-900 hover:text-white transition"
+        >
+          Backlogs
+        </a>
+        <a
+          href="/notes"
+          className="inline-block border border-neutral-900 px-4 py-2 text-sm hover:bg-neutral-900 hover:text-white transition"
+        >
+          Notes
         </a>
       </div>
     </main>

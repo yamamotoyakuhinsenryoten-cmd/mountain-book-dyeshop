@@ -5,8 +5,10 @@ import { logs } from "@/data/logs";
 export default function LogsPage() {
   return (
     <main className="max-w-5xl mx-auto p-8">
-      <h1 className="text-3xl mb-8">制作ログ</h1>
-
+      <h1 className="text-3xl mb-8">Logs</h1>
+      <div className="back-link">
+        <a href="/">← Top</a>
+      </div>
       <div className="grid gap-8">
         {logs.map((log) => (
           <Link

@@ -17,7 +17,7 @@ export default async function LogPage({
     <main className="log-page">
       <h1>{log.title}</h1>
       <div className="back-link">
-        <a href="/logs">← ログ一覧へ戻る</a>
+        <a href="/logs">← Logs</a>
       </div>
       <section>
         <h2>Summary</h2>
@@ -96,7 +96,7 @@ export default async function LogPage({
       </section>
 
       <div className="back-link">
-        <a href="/logs">← ログ一覧へ戻る</a>
+        <a href="/logs">← Logs</a>
       </div>
     </main>
   );
