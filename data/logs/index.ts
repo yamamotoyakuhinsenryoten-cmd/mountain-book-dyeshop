@@ -14,6 +14,7 @@ import { makuracover001 } from "./makuracover-001";
 import { aroha001 } from "./aroha-001";
 import { fixImageCase } from "./fix-imagecase";
 import { fixImageSpeed } from "./fix-imagespeed";
+import { halfpants001 } from "./halfpants-001";
 
 export const logs = [
   baisen001,
@@ -32,4 +33,5 @@ export const logs = [
   coffeeZome003,
   fixImageCase,
   fixImageSpeed,
+  halfpants001,
 ];
