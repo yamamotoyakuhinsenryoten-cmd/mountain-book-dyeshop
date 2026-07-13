@@ -12,10 +12,10 @@ export const backlogs = [
   {
     title: "表示に時間がかかる",
     category: "Web",
-    done: false,
-    link: { name: "", value: "" },
+    done: true,
+    link: { name: "画像の読み込みを最適化", value: "/logs/fix-imagespeed" },
     createdAt: "2026/7/12",
-    completedAt: "",
+    completedAt: "2026/7/13",
   },
   {
     title: "TOPに表口/裏口を作る",
