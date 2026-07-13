@@ -18,7 +18,12 @@ export default function BacklogsPage() {
             </span>
 
             <span className="text-sm text-gray-500">{item.category}</span>
-            {item.link && <Link href={item.link.value}>→{item.link.name}</Link>}
+            {item.link && (
+              <Link href={item.link.value}>
+                →{item.link.name}
+                <span> {item.completedAt} </span>
+              </Link>
+            )}
           </div>
         ))}
       </div>
