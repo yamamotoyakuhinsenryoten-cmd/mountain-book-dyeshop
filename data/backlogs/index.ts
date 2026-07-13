@@ -76,4 +76,10 @@ export const backlogs = [
         done:false,
         link: {name:"",value:""}
     },
+    {   title:"backlogに完了日ほしい",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
+
 ];
