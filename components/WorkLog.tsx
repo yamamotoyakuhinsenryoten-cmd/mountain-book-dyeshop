@@ -9,6 +9,8 @@ type Props = {
   };
 };
 
+import Image from "next/image";
+
 export default function WorkLog({ log }: Props) {
   return (
     <main className="log-page">
@@ -36,7 +38,12 @@ export default function WorkLog({ log }: Props) {
             case "image":
               return (
                 <div className="media" key={item.src}>
-                  <img src={item.src} />
+                  <Image
+                    src={item.src}
+                    alt={item.caption ?? ""}
+                    width={800}
+                    height={600}
+                  />
                   {item.caption && <p>{item.caption}</p>}
                 </div>
               );
