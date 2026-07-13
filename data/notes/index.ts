@@ -1,12 +1,16 @@
 export const notes = [
-    
-    {   slug:"how-to-coffeezome",
-        title:"コーヒー染めのやり方",
-        category:"some",
-        links:[{name:"関連するLog",value:"/logs/coffeezome-003"},
-            {name:"Youtube",value:"https://www.youtube.com/watch?v=BbhiTlV-4AI&t=376s"},
-        ],
-        text:`
+  {
+    slug: "how-to-coffeezome",
+    title: "コーヒー染めのやり方",
+    category: "some",
+    links: [
+      { name: "関連するLog", value: "/logs/coffeezome-003" },
+      {
+        name: "Youtube",
+        value: "https://www.youtube.com/watch?v=BbhiTlV-4AI&t=376s",
+      },
+    ],
+    text: `
 ■工程
 ①豆乳で下処理
 ・水、豆乳を500mlずつ
@@ -26,8 +30,7 @@ export const notes = [
 
 ⑤好みの色になるまで繰り返し染める
 
-`
-    },
-    // links: "",
-    
+`,
+  },
+  // links: "",
 ];
