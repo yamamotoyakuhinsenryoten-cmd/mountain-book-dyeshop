@@ -11,7 +11,9 @@ export default function logsPage() {
         {logs.map((item, index) => (
           <div key={index} className="flex items-center gap-4">
             <span>
-              <a href={`/logs/${item.slug}`}>{item.title}</a>
+              <a href={`/logs/${item.slug}`}>
+                <span>{item.date}</span> {item.title}
+              </a>
             </span>
             <span className="text-sm text-gray-500">{item.category}</span>
           </div>
