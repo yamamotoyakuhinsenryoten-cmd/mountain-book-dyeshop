@@ -22,6 +22,9 @@ export default function BacklogsPage() {
           </div>
         ))}
       </div>
+      <div className="back-link">
+        <a href="/">← Top</a>
+      </div>
     </main>
   );
 }
