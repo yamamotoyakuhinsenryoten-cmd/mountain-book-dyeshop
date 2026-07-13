@@ -1,38 +1,20 @@
-import Link from "next/link";
-import Image from "next/image";
 import { logs } from "@/data/logs";
 
-export default function LogsPage() {
+export default function logsPage() {
   return (
-    <main className="max-w-5xl mx-auto p-8">
-      <h1 className="text-3xl mb-8">Logs</h1>
+    <main className="max-w-3xl mx-auto p-8">
+      <h1 className="text-3xl font-bold mb-8">log</h1>
       <div className="back-link">
         <a href="/">← Top</a>
       </div>
-      <div className="grid gap-8">
-        {logs.map((log) => (
-          <Link
-            key={log.slug}
-            href={`/logs/${log.slug}`}
-            className="border p-6 rounded-lg hover:shadow"
-          >
-            {log.thumbnail && (
-              <div className="relative w-full h-96 overflow-hidden rounded-md">
-                <Image
-                  src={log.thumbnail}
-                  alt={log.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            )}
-
-            <p className="mt-4 text-sm text-gray-500">{log.date}</p>
-
-            <h2 className="text-xl">{log.title}</h2>
-
-            <p className="mt-2">{log.summary}</p>
-          </Link>
+      <div className="space-y-3">
+        {logs.map((item, index) => (
+          <div key={index} className="flex items-center gap-4">
+            <span>
+              <a href={`/logs/${item.slug}`}>{item.title}</a>
+            </span>
+            <span className="text-sm text-gray-500">{item.category}</span>
+          </div>
         ))}
       </div>
     </main>
