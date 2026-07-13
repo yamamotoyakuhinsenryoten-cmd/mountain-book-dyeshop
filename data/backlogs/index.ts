@@ -81,5 +81,10 @@ export const backlogs = [
         done:false,
         link: {name:"",value:""}
     },
+    {   title:"ショートパンツのログつくる",
+        category:"Web",
+        done:false,
+        link: {name:"",value:""}
+    },
 
 ];
