@@ -1,10 +1,12 @@
 export const coffeeZome001 = {
     slug: "coffeezome-001",
+    type:"work",
     title: "コーヒー染め #1",
     category: "染物",
     thumbnail: "/logs/coffeezome-001/IMG_2176.jpg",
     date: "2026-05-17",
     summary: "コーヒー染め1回目。色々染めてみた",
+    text:``,
 
     info: [{label:"染めたもの",value:"子どものTシャツ、僕のシャツ、綿糸、ダブルガーゼの布（1×1m）"},
       {label:"一言",value:`コーヒー染め1回目。入れすぎた。`},

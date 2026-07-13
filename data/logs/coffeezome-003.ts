@@ -1,10 +1,12 @@
 export const coffeeZome003 = {
     slug: "coffeezome-003",
+    type:"work",
     title: "コーヒー染め #3",
     category: "染物",
     thumbnail: "/logs/coffeezome-003/thumbnail.jpg",
     date: "2026-06-22",
     summary: "レシピがかたまってきた",
+    text:``,
 
     info: [{label:"染めたもの",value:"Wガーゼの布（1×1m）"},
         {label:"下処理",value:"豆乳500mlを水500mlで薄めたもの"},

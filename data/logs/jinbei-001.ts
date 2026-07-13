@@ -1,10 +1,12 @@
 export const jinbei001 =  {
     slug: "jinbei-001",
+    type:"work",
     title: "甚平づくり #1",
     category: "縫物",
     thumbnail: "/logs/jinbei-001/IMG_2356.jpg",
     date: "2026-06-29",
     summary: "子ども用甚平づくり",
+    text:``,
 
     info: [{label:"生地",value:"リップル（猫柄）"},
       {label:"一言",value:"トート・巾着を経て初服作り"},

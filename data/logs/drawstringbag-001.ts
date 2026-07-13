@@ -1,10 +1,12 @@
 export const drawstringbag001 =  {
     slug: "drawstringbag-001",
+    type:"work",
     title: "巾着 #1",
     category: "縫物",
     thumbnail: "/logs/drawstringbag-001/IMG_2277.jpg",
     date: "2026-05-28",
     summary: "こどもの上靴入れに",
+    text:``,
 
     info: [{label:"生地",value:"水玉のオックスとブルーグレーのオックス"},
       {label:"レシピ",value:"nunocoto fabricさん"},

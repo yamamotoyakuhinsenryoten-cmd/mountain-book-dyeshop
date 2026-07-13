@@ -1,11 +1,12 @@
 export const aroha001 =  {
     slug: "aroha-001",
     title: "アロハシャツ #1",
+    type:"work",
     category: "縫物",
     thumbnail: "/logs/aroha-001/IMG_2523.jpg",
     date: "2026-06-29",
     summary: "子ども用アロハづくり",
-
+    text:``,
     info: [{label:"生地",value:"コットンブロード（ゾウ柄）、コーヒー染めしたオックス"},
       {label:"一言",value:"達成感ある"},
 

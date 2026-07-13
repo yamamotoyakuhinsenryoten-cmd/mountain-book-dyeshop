@@ -2,11 +2,13 @@ const date = "2026-05-23";
 
 export const baisen002 = {
     slug: "baisen-002",
+    type:"work",
     title: "手鍋焙煎 #2",
     category: "焙煎",
     thumbnail: "/logs/baisen-002/IMG_2219.jpg",
     date: date,
     summary: "手鍋焙煎2回目",
+    text:``,
 
     info: [{label:"豆",value:"ブラジルS18No2"},
       {label:"焙煎日",value:date},
