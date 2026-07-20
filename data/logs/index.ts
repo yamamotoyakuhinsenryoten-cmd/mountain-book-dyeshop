@@ -15,6 +15,8 @@ import { aroha001 } from "./aroha-001";
 import { fixImageCase } from "./fix-imagecase";
 import { fixImageSpeed } from "./fix-imagespeed";
 import { halfpants001 } from "./halfpants-001";
+import { dev001 } from "./dev-001";
+import { dev002 } from "./dev-002";
 
 export const logs = [
   baisen001,
@@ -34,4 +36,6 @@ export const logs = [
   fixImageCase,
   fixImageSpeed,
   halfpants001,
+  dev001,
+  dev002,
 ];
