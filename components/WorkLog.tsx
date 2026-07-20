@@ -72,7 +72,7 @@ export default function WorkLog({ log }: Props) {
         <h2>Comments</h2>
         <ul>
           {(log as any).comments?.map((item: any) => (
-            <li key={item.text} className="comments">
+            <li key={item.text} className="whitespace-pre-wrap">
               {item.text}
             </li>
           ))}
