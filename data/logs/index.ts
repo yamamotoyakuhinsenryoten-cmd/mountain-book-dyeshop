@@ -6,6 +6,7 @@ import { baisen005 } from "./baisen-005";
 import { baisen006 } from "./baisen-006";
 import { baisen007 } from "./baisen-007";
 import { baisen008 } from "./baisen-008";
+import { baisen009 } from "./baisen-009";
 import { coffeeZome001 } from "./coffeezome-001";
 import { coffeeZome002 } from "./coffeezome-002";
 import { coffeeZome003 } from "./coffeezome-003";
@@ -29,6 +30,7 @@ export const logs = [
   baisen006,
   baisen007,
   baisen008,
+  baisen009,
   makuracover001,
   drawstringbag001,
   jinbei001,

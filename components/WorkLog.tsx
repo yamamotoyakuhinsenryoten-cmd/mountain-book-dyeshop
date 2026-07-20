@@ -43,6 +43,7 @@ export default function WorkLog({ log }: Props) {
                     alt={item.caption ?? ""}
                     width={800}
                     height={600}
+                    className="w-full h-auto"
                   />
                   {item.caption && <p>{item.caption}</p>}
                 </div>
