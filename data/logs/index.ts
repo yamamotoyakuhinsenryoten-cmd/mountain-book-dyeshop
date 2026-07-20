@@ -17,6 +17,7 @@ import { fixImageSpeed } from "./fix-imagespeed";
 import { halfpants001 } from "./halfpants-001";
 import { dev001 } from "./dev-001";
 import { dev002 } from "./dev-002";
+import { dev003 } from "./dev-003";
 
 export const logs = [
   baisen001,
@@ -38,4 +39,5 @@ export const logs = [
   halfpants001,
   dev001,
   dev002,
+  dev003,
 ];
