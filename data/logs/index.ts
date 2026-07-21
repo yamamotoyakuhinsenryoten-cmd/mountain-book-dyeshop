@@ -21,6 +21,7 @@ import { dev001 } from "./dev-001";
 import { dev002 } from "./dev-002";
 import { dev003 } from "./dev-003";
 import { dev004 } from "./dev-004";
+import { obscurecoffee001 } from "./obscurecoffee-001";
 
 export const logs = [
   baisen001,
@@ -46,4 +47,5 @@ export const logs = [
   dev002,
   dev003,
   dev004,
+  obscurecoffee001,
 ];
