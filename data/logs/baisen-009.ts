@@ -10,14 +10,17 @@ export const baisen009 = {
   text: ``,
 
   info: [
-    { label: "豆", value: "ブラジルS18No2" },
-    { label: "焙煎日", value: date },
-    { label: "焙煎前", value: "147g" },
-    { label: "焙煎後 ", value: "119g" },
-    { label: "1ハゼ", value: "9分半くらい" },
-    { label: "2ハゼ", value: "12分くらい" },
-    { label: "終了", value: "14分くらい(2ハゼ1,2分以内くらい)" },
-    { label: "一言", value: "" },
+    { label: "豆", value: "ブラジル S18 No.2" },
+    { label: "焙煎日", value: "2026/7/19" },
+    { label: "焙煎前", value: "147g（ハンドピック前：152g）" },
+    { label: "焙煎後", value: "119g" },
+    { label: "1ハゼ", value: "9:23（投入から）" },
+    { label: "2ハゼ", value: "13:48（投入から）" },
+    { label: "終了", value: "15:49（投入から）" },
+    {
+      label: "一言",
+      value: "ボディしっかり、苦いけどマイルド。次回はもう少し深煎りを目指す。",
+    },
   ],
 
   content: [
@@ -89,5 +92,7 @@ export const baisen009 = {
     },
   ],
 
-  links: [],
+  links: [
+    { name: "Youtube", link: "https://www.youtube.com/watch?v=G1e063cY49s" },
+  ],
 };
