@@ -22,8 +22,9 @@ import { dev002 } from "./dev-002";
 import { dev003 } from "./dev-003";
 import { dev004 } from "./dev-004";
 import { obscurecoffee001 } from "./obscurecoffee-001";
+import { migrateLegacyLog, type Log } from "./types";
 
-export const logs = [
+const legacyLogs = [
   baisen001,
   baisen002,
   baisen003,
@@ -49,3 +50,5 @@ export const logs = [
   dev004,
   obscurecoffee001,
 ];
+
+export const logs: Log[] = legacyLogs.map(migrateLegacyLog);

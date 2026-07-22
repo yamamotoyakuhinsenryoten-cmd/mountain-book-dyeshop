@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { logs } from "@/data/logs";
+import { items } from "@/data/items";
 
 export default function LogsPage() {
   return (
@@ -10,28 +10,21 @@ export default function LogsPage() {
         <a href="/">← Top</a>
       </div>
       <div className="grid gap-8">
-        {logs.map((log) => (
+        {items.map((item) => (
           <Link
-            key={log.slug}
-            href={`/logs/${log.slug}`}
+            key={item.slug}
+            href={`/items/${item.slug}`}
             className="border p-6 rounded-lg hover:shadow"
           >
-            {log.thumbnail && (
-              <div className="relative w-full h-96 overflow-hidden rounded-md">
-                <Image
-                  src={log.thumbnail}
-                  alt={log.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            )}
+            <div className="relative w-full h-96 overflow-hidden rounded-md">
+              <Image src={item.image} alt={item.title} fill className="object-cover" />
+            </div>
 
-            <p className="mt-4 text-sm text-gray-500">{log.date}</p>
+            <p className="mt-4 text-sm text-gray-500">{item.date}</p>
 
-            <h2 className="text-xl">{log.title}</h2>
+            <h2 className="text-xl">{item.title}</h2>
 
-            <p className="mt-2">{log.summary}</p>
+            <p className="mt-2">{item.note}</p>
           </Link>
         ))}
       </div>

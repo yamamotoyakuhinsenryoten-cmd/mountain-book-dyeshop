@@ -1,28 +1,20 @@
-type Props = {
-  log: {
-    title: string;
-    info: { label: string; value: string }[];
-    content: { type: string; src?: string; caption?: string; text?: string }[];
-    comments?: { text: string }[];
-    nexts?: { text: string }[];
-    links?: { name: string; link: string }[];
-  };
-};
-
 import Image from "next/image";
+import type { Log } from "@/data/logs/types";
+
+type Props = { log: Log };
 
 export default function WorkLog({ log }: Props) {
   return (
     <main className="log-page">
-      <h1>{log.title}</h1>
+      <h1>{log.info.title}</h1>
       <div className="back-link">
         <a href="/logs">← Logs</a>
       </div>
       <section>
-        <h2>Summary</h2>
+        <h2>Info</h2>
 
         <ul>
-          {log.info?.map((item) => (
+          {log.info.details.map((item) => (
             <li key={item.label}>
               {item.label}: {item.value}
             </li>
@@ -31,9 +23,9 @@ export default function WorkLog({ log }: Props) {
       </section>
 
       <section className="detail">
-        <h2>Detail</h2>
+        <h2>Media</h2>
 
-        {log.content.map((item: any, index: number) => {
+        {log.media.map((item, index) => {
           switch (item.type) {
             case "image":
               return (
@@ -60,41 +52,28 @@ export default function WorkLog({ log }: Props) {
                   {item.caption && <p>{item.caption}</p>}
                 </div>
               );
-            case "text":
-              return (
-                <p className="log-text" key={index}>
-                  {item.text}
-                </p>
-              );
           }
         })}
       </section>
       <section className="comments">
-        <h2>Comments</h2>
+        <h2>Log</h2>
         <ul>
-          {(log as any).comments?.map((item: any) => (
-            <li key={item.text} className="whitespace-pre-wrap">
+          {log.log.map((item, index) => (
+            <li key={index} className="whitespace-pre-wrap">
+              <strong>{item.role === "user" ? "User" : "Assistant"}: </strong>
               {item.text}
             </li>
           ))}
         </ul>
       </section>
-      <section className="nexts">
-        <h2>Next</h2>
-        <ul>
-          {(log as any).nexts?.map((item: any) => (
-            <li key={item.text}>{item.text}</li>
-          ))}
-        </ul>
-      </section>
+      {log.source && <section><h2>Source</h2><a href={log.source}>{log.source}</a></section>}
       <section className="links">
-        <h2>Links</h2>
+        <h2>Related</h2>
         <ul>
-          {(log as any).links?.map((item: any) => (
-            <li key={item.name}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                {item.name}
-              </a>
+          {log.related.map((item) => (
+            <li key={`${item.kind}-${item.title}`}>
+              {item.kind === "external" ? <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a> :
+                item.kind === "log" ? <a href={`/logs/${item.slug}`}>{item.title}</a> : item.title}
             </li>
           ))}
         </ul>
