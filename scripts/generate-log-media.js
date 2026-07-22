@@ -23,7 +23,7 @@ const mediaTypes = [
   },
 ];
 
-const content = [];
+const media = [];
 
 mediaTypes.forEach(({ dir, type, extensions }) => {
   const mediaDir = path.join(
@@ -48,7 +48,7 @@ mediaTypes.forEach(({ dir, type, extensions }) => {
     .sort();
 
   files.forEach(file => {
-    content.push({
+    media.push({
       type,
       src: `/logs/${logName}/${dir}/${file}`,
       caption: "",
@@ -56,7 +56,7 @@ mediaTypes.forEach(({ dir, type, extensions }) => {
   });
 });
 
-const output = JSON.stringify(content, null, 2);
+const output = JSON.stringify(media, null, 2);
 
 console.log(output);
 
