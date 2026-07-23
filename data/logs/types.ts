@@ -28,6 +28,7 @@ export type Log = {
     category: string;
     details: { label: string; value: string }[];
   };
+  insights: string[];
   media: Media[];
   log: LogEntry[];
   source?: {
@@ -44,6 +45,7 @@ type LegacyLog = {
   type: string;
   text?: string;
   info?: { label: string; value: string }[];
+  insights: string[];
   content?: (
     { type: string; src?: string; caption?: string; text?: string } | undefined
   )[];
@@ -101,6 +103,7 @@ export function migrateLegacyLog(legacy: LegacyLog): Log {
       category: legacy.category,
       details: legacy.info ?? [],
     },
+    insights: [],
     media,
     log: messages,
     ...(legacy.source ? { source: legacy.source } : {}),

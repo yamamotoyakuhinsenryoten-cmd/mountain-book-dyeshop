@@ -21,7 +21,16 @@ export default function WorkLog({ log }: Props) {
           ))}
         </ul>
       </section>
-
+      {log.insights.length > 0 && (
+        <section>
+          <h2>Insight</h2>
+          <ul className="list-disc pl-5">
+            {log.insights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
       <section className="detail">
         <h2>Media</h2>
 
@@ -55,16 +64,11 @@ export default function WorkLog({ log }: Props) {
           }
         })}
       </section>
-      <section className="comments">
+      <section>
         <h2>Log</h2>
-        <ul>
-          {log.log.map((item, index) => (
-            <li key={index} className="whitespace-pre-wrap">
-              <strong>
-                {item.role === "assistant" ? "チャッピー" : "私"}:{" "}
-              </strong>
-              {item.text}
-            </li>
+        <ul className="list-disc pl-5">
+          {log.log.map((item) => (
+            <li key={item.text}>{item.text}</li>
           ))}
         </ul>
       </section>
