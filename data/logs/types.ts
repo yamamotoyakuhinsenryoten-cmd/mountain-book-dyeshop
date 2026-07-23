@@ -14,6 +14,11 @@ export type Related =
   | { kind: "log"; title: string; slug: string }
   | { kind: "backlog"; title: string; id: string };
 
+export type ChatSource = {
+  title: string;
+  url: string;
+};
+
 export type Log = {
   slug: string;
   type: "work";
@@ -25,7 +30,9 @@ export type Log = {
   };
   media: Media[];
   log: LogEntry[];
-  source?: string;
+  source?: {
+    chat: ChatSource;
+  };
   related: Related[];
 };
 
@@ -41,6 +48,9 @@ type LegacyLog = {
   comments?: ({ text: string } | undefined)[];
   nexts?: ({ text: string } | undefined)[];
   links?: { name: string; link: string }[];
+  source?: {
+    chat: ChatSource;
+  };
 };
 
 /** Converts the existing hand-written records to the current Log shape. */
@@ -77,6 +87,7 @@ export function migrateLegacyLog(legacy: LegacyLog): Log {
     info: { title: legacy.title, category: legacy.category, details: legacy.info ?? [] },
     media,
     log: messages,
+    ...(legacy.source ? { source: legacy.source } : {}),
     related,
   };
 }

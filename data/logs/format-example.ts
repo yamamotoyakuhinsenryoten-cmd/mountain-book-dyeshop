@@ -47,8 +47,13 @@ export const formatExample = {
     },
   ],
 
-  // 実データでは元チャットの共有 URL を設定する。
-  source: "https://chatgpt.com/share/REPLACE_WITH_CHAT_ID",
+  // 実データでは元チャットのタイトルと共有 URL を設定する。
+  source: {
+    chat: {
+      title: "焙煎ログ作成チャット",
+      url: "https://chatgpt.com/share/REPLACE_WITH_CHAT_ID",
+    },
+  },
 
   related: [
     {

@@ -66,7 +66,18 @@ export default function WorkLog({ log }: Props) {
           ))}
         </ul>
       </section>
-      {log.source && <section><h2>Source</h2><a href={log.source}>{log.source}</a></section>}
+      {log.source?.chat && (
+        <section>
+          <h2>Source</h2>
+          <a
+            href={log.source.chat.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {log.source.chat.title}
+          </a>
+        </section>
+      )}
       <section className="links">
         <h2>Related</h2>
         <ul>
