@@ -11,7 +11,7 @@ export const makuracover001 = {
   info: [
     { label: "生地", value: "コーヒー染めしたダブルガーゼ" },
     { label: "レシピ", value: "nunocoto fabricさん" },
-    { label: "要約 ", value: "自分で染めた生地を使って枕カバーをつくった" },
+    { label: "要約", value: "自分で染めた生地を使って枕カバーをつくった" },
   ],
 
   content: [

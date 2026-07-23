@@ -60,7 +60,9 @@ export default function WorkLog({ log }: Props) {
         <ul>
           {log.log.map((item, index) => (
             <li key={index} className="whitespace-pre-wrap">
-              <strong>{item.role === "user" ? "User" : "Assistant"}: </strong>
+              <strong>
+                {item.role === "assistant" ? "チャッピー" : "私"}:{" "}
+              </strong>
               {item.text}
             </li>
           ))}
@@ -83,8 +85,15 @@ export default function WorkLog({ log }: Props) {
         <ul>
           {log.related.map((item) => (
             <li key={`${item.kind}-${item.title}`}>
-              {item.kind === "external" ? <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a> :
-                item.kind === "log" ? <a href={`/logs/${item.slug}`}>{item.title}</a> : item.title}
+              {item.kind === "external" ? (
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.title}
+                </a>
+              ) : item.kind === "log" ? (
+                <a href={`/logs/${item.slug}`}>{item.title}</a>
+              ) : (
+                item.title
+              )}
             </li>
           ))}
         </ul>
