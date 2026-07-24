@@ -1,3 +1,5 @@
+import type { Log } from "./types";
+
 export const makuracover002 = {
   slug: "makuracover-002",
   type: "work",
@@ -126,4 +128,4 @@ export const makuracover002 = {
       url: "https://book.nunocoto-fabric.com/37056",
     },
   ],
-};
+} satisfies Log;

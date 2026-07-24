@@ -23,6 +23,7 @@ import { dev003 } from "./dev-003";
 import { dev004 } from "./dev-004";
 import { obscurecoffee001 } from "./obscurecoffee-001";
 import { makuracover002 } from "./makuracover-002";
+import { covertcoffee001 } from "./covertcoffee-001";
 import { migrateLegacyLog, type Log } from "./types";
 
 const legacyLogs = [
@@ -52,7 +53,5 @@ const legacyLogs = [
   obscurecoffee001,
 ];
 
-export const logs: Log[] = [
-  ...legacyLogs.map(migrateLegacyLog),
-  makuracover002,
-];
+const newLogs: Log[] = [makuracover002, covertcoffee001];
+export const logs: Log[] = [...legacyLogs.map(migrateLegacyLog), ...newLogs];

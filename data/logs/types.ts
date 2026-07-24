@@ -45,7 +45,7 @@ type LegacyLog = {
   type: string;
   text?: string;
   info?: { label: string; value: string }[];
-  insights: string[];
+  insights?: string[];
   content?: (
     { type: string; src?: string; caption?: string; text?: string } | undefined
   )[];
