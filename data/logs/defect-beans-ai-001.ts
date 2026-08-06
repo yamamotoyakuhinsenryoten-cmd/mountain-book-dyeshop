@@ -134,5 +134,11 @@ export const defectbeansai001 = {
     },
   },
 
-  related: [],
+  related: [
+    {
+      kind: "external",
+      title: "スプシでの判定結果比較",
+      url: "https://docs.google.com/spreadsheets/d/1BhEU1omFTI2ujuKsAljStusFpkxolnG-IIu_ro9j4XU/edit?gid=0#gid=0",
+    },
+  ],
 } satisfies Log;
