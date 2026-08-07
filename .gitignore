@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 scripts/household_budget/input.csv
 scripts/household_budget/output.csv
+scripts/ai_analyzer/input/
+scripts/ai_analyzer/output/result.md
