@@ -7,6 +7,7 @@ import { baisen006 } from "./baisen-006";
 import { baisen007 } from "./baisen-007";
 import { baisen008 } from "./baisen-008";
 import { baisen009 } from "./baisen-009";
+import { baisen010 } from "./baisen-010";
 import { coffeeZome001 } from "./coffeezome-001";
 import { coffeeZome002 } from "./coffeezome-002";
 import { coffeeZome003 } from "./coffeezome-003";
@@ -64,5 +65,6 @@ const newLogs: Log[] = [
   defectbeansai002,
   householdbudget001,
   morningpageocr001,
+  baisen010,
 ];
 export const logs: Log[] = [...legacyLogs.map(migrateLegacyLog), ...newLogs];
