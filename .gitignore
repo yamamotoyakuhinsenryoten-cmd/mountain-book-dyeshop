@@ -42,4 +42,8 @@ next-env.d.ts
 scripts/household_budget/input.csv
 scripts/household_budget/output.csv
 scripts/ai_analyzer/input/
-scripts/ai_analyzer/output/result.md
+scripts/ai_analyzer/output/
+scripts/ai_analyzer/exp
+scripts/morning-page-ocr/images/
+scripts/morning-page-ocr/output/
+scripts/morning-page-ocr/credentials.json
