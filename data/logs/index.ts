@@ -31,6 +31,7 @@ import { defectbeansai001 } from "./defect-beans-ai-001";
 import { defectbeansai002 } from "./defect-beans-ai-002";
 import { householdbudget001 } from "./house-hold-budget-001";
 import { morningpageocr001 } from "./morningpage-ocr-001";
+import { allseasonscoffee001 } from "./all-seasons-coffee-001";
 import { migrateLegacyLog, type Log } from "./types";
 
 const legacyLogs = [
@@ -67,6 +68,7 @@ const newLogs: Log[] = [
   defectbeansai002,
   householdbudget001,
   morningpageocr001,
+  allseasonscoffee001,
   baisen010,
   baisen011,
   aroha002,

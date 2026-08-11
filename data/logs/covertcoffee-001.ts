@@ -5,8 +5,8 @@ export const covertcoffee001 = {
   createdAt: "2026-07-24",
 
   info: {
-    title: "COVERT COFFEE訪問 #1",
-    category: "コーヒー",
+    title: "COVERT COFFEE（新宿）",
+    category: "コーヒーショップ",
     details: [
       {
         label: "店舗",
