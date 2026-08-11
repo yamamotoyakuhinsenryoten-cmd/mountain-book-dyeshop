@@ -16,6 +16,7 @@ import { drawstringbag001 } from "./drawstringbag-001";
 import { jinbei001 } from "./jinbei-001";
 import { makuracover001 } from "./makuracover-001";
 import { aroha001 } from "./aroha-001";
+import { aroha002 } from "./aroha-002";
 import { fixImageCase } from "./fix-imagecase";
 import { fixImageSpeed } from "./fix-imagespeed";
 import { halfpants001 } from "./halfpants-001";
@@ -68,5 +69,6 @@ const newLogs: Log[] = [
   morningpageocr001,
   baisen010,
   baisen011,
+  aroha002,
 ];
 export const logs: Log[] = [...legacyLogs.map(migrateLegacyLog), ...newLogs];
