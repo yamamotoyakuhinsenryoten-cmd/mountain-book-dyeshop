@@ -33,6 +33,7 @@ import { householdbudget001 } from "./house-hold-budget-001";
 import { morningpageocr001 } from "./morningpage-ocr-001";
 import { allseasonscoffee001 } from "./all-seasons-coffee-001";
 import { bench001 } from "./bench-001";
+import { tamanegisome001 } from "./tamanegisome-001";
 import { migrateLegacyLog, type Log } from "./types";
 
 const legacyLogs = [
@@ -74,5 +75,6 @@ const newLogs: Log[] = [
   baisen011,
   aroha002,
   bench001,
+  tamanegisome001,
 ];
 export const logs: Log[] = [...legacyLogs.map(migrateLegacyLog), ...newLogs];
