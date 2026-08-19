@@ -17,13 +17,7 @@ import { jinbei001 } from "./jinbei-001";
 import { makuracover001 } from "./makuracover-001";
 import { aroha001 } from "./aroha-001";
 import { aroha002 } from "./aroha-002";
-import { fixImageCase } from "./fix-imagecase";
-import { fixImageSpeed } from "./fix-imagespeed";
 import { halfpants001 } from "./halfpants-001";
-import { dev001 } from "./dev-001";
-import { dev002 } from "./dev-002";
-import { dev003 } from "./dev-003";
-import { dev004 } from "./dev-004";
 import { obscurecoffee001 } from "./obscurecoffee-001";
 import { makuracover002 } from "./makuracover-002";
 import { covertcoffee001 } from "./covertcoffee-001";
@@ -54,13 +48,6 @@ const legacyLogs = [
   coffeeZome001,
   coffeeZome002,
   coffeeZome003,
-  fixImageCase,
-  fixImageSpeed,
-  halfpants001,
-  dev001,
-  dev002,
-  dev003,
-  dev004,
   obscurecoffee001,
 ];
 
