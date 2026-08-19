@@ -9,9 +9,9 @@ import { baisen008 } from "./baisen-008";
 import { baisen009 } from "./baisen-009";
 import { baisen010 } from "./baisen-010";
 import { baisen011 } from "./baisen-011";
-import { coffeeZome001 } from "./coffeezome-001";
-import { coffeeZome002 } from "./coffeezome-002";
-import { coffeeZome003 } from "./coffeezome-003";
+import { coffeezome001 } from "./coffeezome-001";
+import { coffeezome002 } from "./coffeezome-002";
+import { coffeezome003 } from "./coffeezome-003";
 import { drawstringbag001 } from "./drawstringbag-001";
 import { jinbei001 } from "./jinbei-001";
 import { makuracover001 } from "./makuracover-001";
@@ -29,10 +29,9 @@ import { allseasonscoffee001 } from "./all-seasons-coffee-001";
 import { bench001 } from "./bench-001";
 import { tamanegisome001 } from "./tamanegisome-001";
 import { sirensblend001 } from "./sirensblend-001";
-import { migrateLegacyLog, type Log } from "./types";
+import { Log } from "./types";
 
-const legacyLogs = [
-  baisen001,
+export const logs: Log[] = [
   baisen002,
   baisen003,
   baisen004,
@@ -41,17 +40,16 @@ const legacyLogs = [
   baisen007,
   baisen008,
   baisen009,
+  jinbei001,
+  obscurecoffee001,
   makuracover001,
   drawstringbag001,
-  jinbei001,
   aroha001,
-  coffeeZome001,
-  coffeeZome002,
-  coffeeZome003,
-  obscurecoffee001,
-];
-
-const newLogs: Log[] = [
+  halfpants001,
+  coffeezome001,
+  coffeezome002,
+  coffeezome003,
+  baisen001,
   makuracover002,
   covertcoffee001,
   defectbeansai001,
@@ -66,4 +64,3 @@ const newLogs: Log[] = [
   tamanegisome001,
   sirensblend001,
 ];
-export const logs: Log[] = [...legacyLogs.map(migrateLegacyLog), ...newLogs];

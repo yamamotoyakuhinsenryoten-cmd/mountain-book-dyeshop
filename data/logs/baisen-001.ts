@@ -1,23 +1,43 @@
-const date = "2026-04-23";
-export const baisen001 = {
+import type { Log } from "./types";
+
+export const baisen001: Log = {
   slug: "baisen-001",
   type: "work",
-  title: "手鍋焙煎 #1",
-  category: "焙煎",
-  thumbnail: "/logs/baisen-001/IMG_1847.jpg",
-  date: date,
-  summary: "手鍋焙煎1回目",
-  text: ``,
-
-  info: [
-    { label: "豆", value: "ブラジルS18No2" },
-    { label: "焙煎日", value: date },
-    { label: "焙煎前", value: "???（150gほど）" },
-    { label: "焙煎後 ", value: "???" },
-    { label: "一言", value: "初めての手鍋焙煎。おもしろかった" },
+  createdAt: "2026-04-23",
+  info: {
+    title: "手鍋焙煎 #1",
+    category: "焙煎",
+    details: [
+      {
+        label: "豆",
+        value: "ブラジルS18No2",
+      },
+      {
+        label: "焙煎日",
+        value: "2026-04-23",
+      },
+      {
+        label: "焙煎前",
+        value: "???（150gほど）",
+      },
+      {
+        label: "焙煎後 ",
+        value: "???",
+      },
+      {
+        label: "一言",
+        value: "初めての手鍋焙煎。おもしろかった",
+      },
+    ],
+  },
+  insights: [
+    "色の変化や香りがたのしかった",
+    "意外と15分鍋ふってても暇しない",
+    "味は微妙、酸味が強くて、かなり浅煎りになっちゃったのかもしれない",
+    "ガスコンロのセンサーが途中できいちゃたので、次はカセットコンロでやってみる",
+    "もうすこし深めに焙煎してみる",
   ],
-
-  content: [
+  media: [
     {
       type: "image",
       src: "/logs/baisen-001/IMG_1847.jpg",
@@ -101,7 +121,6 @@ export const baisen001 = {
     {
       type: "image",
       src: "/logs/baisen-001/IMG_1863.jpg",
-      caption: "",
     },
     {
       type: "image",
@@ -124,32 +143,6 @@ export const baisen001 = {
       caption: "アップで",
     },
   ],
-
-  comments: [
-    {
-      text: `・色の変化や香りがたのしかった
-        `,
-    },
-    {
-      text: `・意外と15分鍋ふってても暇しない
-        `,
-    },
-    {
-      text: `・味は微妙、酸味が強くて、かなり浅煎りになっちゃったのかもしれない
-        `,
-    },
-  ],
-
-  nexts: [
-    {
-      text: `・ガスコンロのセンサーが途中できいちゃたので、次はカセットコンロでやってみる
-        `,
-    },
-    {
-      text: `・もうすこし深めに焙煎してみる
-        `,
-    },
-  ],
-
-  links: [],
+  log: [],
+  related: [],
 };
