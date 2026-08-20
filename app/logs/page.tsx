@@ -12,10 +12,10 @@ export default function logsPage() {
           <div key={index} className="flex items-center gap-4">
             <span>
               <a href={`/logs/${item.slug}`}>
-                <span>{item.createdAt}</span> {item.info.title}
+                <span>{item.createdAt}</span> {item.title}
               </a>
             </span>
-            <span className="text-sm text-gray-500">{item.info.category}</span>
+            <span className="text-sm text-gray-500">{item.category}</span>
           </div>
         ))}
       </div>

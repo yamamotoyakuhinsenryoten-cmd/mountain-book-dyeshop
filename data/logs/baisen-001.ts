@@ -4,32 +4,30 @@ export const baisen001: Log = {
   slug: "baisen-001",
   type: "work",
   createdAt: "2026-04-23",
-  info: {
-    title: "手鍋焙煎 #1",
-    category: "焙煎",
-    details: [
-      {
-        label: "豆",
-        value: "ブラジルS18No2",
-      },
-      {
-        label: "焙煎日",
-        value: "2026-04-23",
-      },
-      {
-        label: "焙煎前",
-        value: "???（150gほど）",
-      },
-      {
-        label: "焙煎後 ",
-        value: "???",
-      },
-      {
-        label: "一言",
-        value: "初めての手鍋焙煎。おもしろかった",
-      },
-    ],
-  },
+  title: "手鍋焙煎 #1",
+  category: "焙煎",
+  details: [
+    {
+      label: "豆",
+      value: "ブラジルS18No2",
+    },
+    {
+      label: "焙煎日",
+      value: "2026-04-23",
+    },
+    {
+      label: "焙煎前",
+      value: "???（150gほど）",
+    },
+    {
+      label: "焙煎後 ",
+      value: "???",
+    },
+    {
+      label: "一言",
+      value: "初めての手鍋焙煎。おもしろかった",
+    },
+  ],
   insights: [
     "色の変化や香りがたのしかった",
     "意外と15分鍋ふってても暇しない",
@@ -143,6 +141,5 @@ export const baisen001: Log = {
       caption: "アップで",
     },
   ],
-  log: [],
   related: [],
 };

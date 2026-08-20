@@ -1,5 +1,5 @@
 import { logs } from "@/data/logs";
-import WorkLog from "@/components/WorkLog";
+import LogDetail from "@/components/LogDetail";
 
 export default async function LogPage({
   params,
@@ -14,5 +14,5 @@ export default async function LogPage({
     return <div>Not found</div>;
   }
 
-  return <WorkLog log={log} />;
+  return <LogDetail log={log} />;
 }

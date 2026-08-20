@@ -1,34 +1,46 @@
 import Image from "next/image";
 import type { Log } from "@/data/logs/types";
+import ReactMarkdown from "react-markdown";
 
 type Props = { log: Log };
 
-export default function WorkLog({ log }: Props) {
+export default function LogDetail({ log }: Props) {
   return (
     <main className="log-page">
-      <h1>{log.info.title}</h1>
+      <h1>{log.title}</h1>
       <div className="back-link">
         <a href="/logs">← Logs</a>
       </div>
-      <section>
-        <h2>Info</h2>
+      {log.type === "work" ||
+        (log.type === "experience" && (
+          <section>
+            <h2>Info</h2>
 
-        <ul>
-          {log.info.details.map((item) => (
-            <li key={item.label}>
-              {item.label}: {item.value}
-            </li>
-          ))}
-        </ul>
-      </section>
-      {log.insights.length > 0 && (
-        <section>
-          <h2>Insight</h2>
-          <ul className="list-disc pl-5">
-            {log.insights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+            <ul>
+              {log.details.map((item) => (
+                <li key={item.label}>
+                  {item.label}: {item.value}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      {(log.type === "work" || log.type === "experience") &&
+        log.insights.length > 0 && (
+          <section>
+            <h2>Insight</h2>
+            <ul className="list-disc pl-5">
+              {log.insights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+      {log.type === "development" && (
+        <section className="detail">
+          <div className="markdown">
+            <ReactMarkdown>{log.markdown}</ReactMarkdown>
+          </div>
         </section>
       )}
       <section className="detail">
@@ -64,23 +76,11 @@ export default function WorkLog({ log }: Props) {
           }
         })}
       </section>
-      <section>
-        <h2>Log</h2>
-        <ul className="list-disc pl-5">
-          {log.log.map((item) => (
-            <li key={item.text}>{item.text}</li>
-          ))}
-        </ul>
-      </section>
-      {log.source?.chat && (
+      {log.source && (
         <section>
           <h2>Source</h2>
-          <a
-            href={log.source.chat.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {log.source.chat.title}
+          <a href={log.source.url} target="_blank" rel="noopener noreferrer">
+            {log.source.title}
           </a>
         </section>
       )}

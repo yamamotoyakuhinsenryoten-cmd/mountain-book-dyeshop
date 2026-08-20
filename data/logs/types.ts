@@ -4,35 +4,44 @@ export type Media = {
   caption?: string;
 };
 
-export type LogEntry = {
-  role: "user" | "assistant";
-  text: string;
-};
-
 export type Related =
   | { kind: "external"; title: string; url: string }
   | { kind: "log"; title: string; slug: string }
   | { kind: "backlog"; title: string; id: string };
 
-export type ChatSource = {
-  title: string;
-  url: string;
-};
-
-export type Log = {
+type BaseLog = {
   slug: string;
-  type: "work";
+  type: "work" | "experience" | "development";
   createdAt: string;
-  info: {
-    title: string;
-    category: string;
-    details: { label: string; value: string }[];
-  };
-  insights: string[];
+
+  title: string;
+  category: string;
+
   media: Media[];
-  log: LogEntry[];
+
   source?: {
-    chat: ChatSource;
+    title: string;
+    url: string;
   };
+
   related: Related[];
 };
+
+export type WorkLog = BaseLog & {
+  type: "work";
+  details: { label: string; value: string }[];
+  insights: string[];
+};
+
+export type ExperienceLog = BaseLog & {
+  type: "experience";
+  details: { label: string; value: string }[];
+  insights: string[];
+};
+
+export type DevelopmentLog = BaseLog & {
+  type: "development";
+  markdown: string;
+};
+
+export type Log = WorkLog | ExperienceLog | DevelopmentLog;

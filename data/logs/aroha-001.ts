@@ -1,24 +1,22 @@
 import type { Log } from "./types";
 
 export const aroha001: Log = {
-  "slug": "aroha-001",
-  "type": "work",
-  "createdAt": "2026-06-29",
-  "info": {
-    "title": "アロハシャツ #1",
-    "category": "縫物",
-    "details": [
-      {
-        "label": "生地",
-        "value": "コットンブロード（ゾウ柄）、コーヒー染めしたオックス"
-      },
-      {
-        "label": "一言",
-        "value": "達成感ある"
-      }
-    ]
-  },
-  "insights": [
+  slug: "aroha-001",
+  type: "work",
+  createdAt: "2026-06-29",
+  title: "アロハシャツ #1",
+  category: "縫物",
+  details: [
+    {
+      label: "生地",
+      value: "コットンブロード（ゾウ柄）、コーヒー染めしたオックス",
+    },
+    {
+      label: "一言",
+      value: "達成感ある",
+    },
+  ],
+  insights: [
     "【裁断】 ネットで生地を買ったら、思ったより大柄で派手だった。コーヒー染めしたポケットつけることで中和を狙った。 柄が変なとこで切れないように気を遣う。 今回は縫いしろのない型紙だったけど、甚平のときよりはうまく切れたかな。 そろそろ100均じゃない布切りバサミがほしくなってきた。リップルのときはよかったけど、コットンブロードすこし厚めで引っかかる感じがした。",
     "【端処理】ミシンを物置から引っ張り出してきた。動かすまでに一苦労。下糸がちゃんとセットできてなくて、うまく動かなかった。 今回端処理とボタンホールにミシンを活用してみようかと思った。じぐざぐ縫いをしてみる。少し布がつっぱる。",
     "【接着芯】 接着芯もはじめてつかった。衿と見返しの部分。100均の薄いやつ。接着芯ってこんなペラペラでも布がしっかりするんだな",
@@ -33,66 +31,66 @@ export const aroha001: Log = {
     "【完成後感想3】1着シャツ作って、すごくたくさん初めてのステップがあって、経験値がぐっとあがった気がする、シャツを作ったことがあるってなかなかじゃないか、と自画自賛したい。",
     "端処理は最初に全部ミシンでやっちゃう",
     "ボタンホールミシンでやってみる",
-    "もう一度シャツ作ってみよう"
+    "もう一度シャツ作ってみよう",
   ],
-  "media": [
+  media: [
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2479.jpg",
-      "caption": "ミシンを物置からだした。動かせるようにするのに一苦労"
+      type: "image",
+      src: "/logs/aroha-001/IMG_2479.jpg",
+      caption: "ミシンを物置からだした。動かせるようにするのに一苦労",
     },
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2523.jpg",
-      "caption": "衿付け苦労した"
+      type: "image",
+      src: "/logs/aroha-001/IMG_2523.jpg",
+      caption: "衿付け苦労した",
     },
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2588.jpg",
-      "caption": "着せてみた"
+      type: "image",
+      src: "/logs/aroha-001/IMG_2588.jpg",
+      caption: "着せてみた",
     },
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2590.jpg",
-      "caption": "着せてみた２"
+      type: "image",
+      src: "/logs/aroha-001/IMG_2590.jpg",
+      caption: "着せてみた２",
     },
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2591.jpg",
-      "caption": "着せてみた３"
+      type: "image",
+      src: "/logs/aroha-001/IMG_2591.jpg",
+      caption: "着せてみた３",
     },
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2592.jpg",
-      "caption": "着せてみた４"
+      type: "image",
+      src: "/logs/aroha-001/IMG_2592.jpg",
+      caption: "着せてみた４",
     },
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2593.jpg",
-      "caption": "着せてみた５"
+      type: "image",
+      src: "/logs/aroha-001/IMG_2593.jpg",
+      caption: "着せてみた５",
     },
     {
-      "type": "image",
-      "src": "/logs/aroha-001/IMG_2594.jpg",
-      "caption": "着せてみた６"
-    }
+      type: "image",
+      src: "/logs/aroha-001/IMG_2594.jpg",
+      caption: "着せてみた６",
+    },
   ],
-  "log": [],
-  "related": [
+
+  related: [
     {
-      "kind": "external",
-      "title": "レシピ＆型紙（アロハ）",
-      "url": "https://www.lcv.ne.jp/~edward2/tukurikata-aroha.html"
+      kind: "external",
+      title: "レシピ＆型紙（アロハ）",
+      url: "https://www.lcv.ne.jp/~edward2/tukurikata-aroha.html",
     },
     {
-      "kind": "external",
-      "title": "レシピ＆型紙（ポケット）",
-      "url": "https://book.nunocoto-fabric.com/38473"
+      kind: "external",
+      title: "レシピ＆型紙（ポケット）",
+      url: "https://book.nunocoto-fabric.com/38473",
     },
     {
-      "kind": "external",
-      "title": "ボタン付け",
-      "url": "https://book.nunocoto-fabric.com/64575"
-    }
-  ]
+      kind: "external",
+      title: "ボタン付け",
+      url: "https://book.nunocoto-fabric.com/64575",
+    },
+  ],
 };

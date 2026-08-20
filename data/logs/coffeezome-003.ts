@@ -1,73 +1,71 @@
 import type { Log } from "./types";
 
 export const coffeezome003: Log = {
-  "slug": "coffeezome-003",
-  "type": "work",
-  "createdAt": "2026-06-22",
-  "info": {
-    "title": "コーヒー染め #3",
-    "category": "染物",
-    "details": [
-      {
-        "label": "染めたもの",
-        "value": "Wガーゼの布（1×1m）"
-      },
-      {
-        "label": "下処理",
-        "value": "豆乳500mlを水500mlで薄めたもの"
-      },
-      {
-        "label": "染液",
-        "value": "コーヒーグラウンズ180g、水4L"
-      },
-      {
-        "label": "1回あたりの染色時間",
-        "value": "1時間"
-      },
-      {
-        "label": "重ね染め",
-        "value": "4回"
-      },
-      {
-        "label": "一言",
-        "value": "レシピがかたまってきた"
-      }
-    ]
-  },
-  "insights": [
+  slug: "coffeezome-003",
+  type: "work",
+  createdAt: "2026-06-22",
+  title: "コーヒー染め #3",
+  category: "染物",
+  details: [
+    {
+      label: "染めたもの",
+      value: "Wガーゼの布（1×1m）",
+    },
+    {
+      label: "下処理",
+      value: "豆乳500mlを水500mlで薄めたもの",
+    },
+    {
+      label: "染液",
+      value: "コーヒーグラウンズ180g、水4L",
+    },
+    {
+      label: "1回あたりの染色時間",
+      value: "1時間",
+    },
+    {
+      label: "重ね染め",
+      value: "4回",
+    },
+    {
+      label: "一言",
+      value: "レシピがかたまってきた",
+    },
+  ],
+  insights: [
     "1回目落し蓋ありで少々ムラあり、2回目は落し蓋なしでキレイに染まった、ないほうがよさそう",
     "今回は4回染めまでやってみて、1→2回目は変化が大きかった。3回目以降はほんとに少しずつ濃くなる程度",
     "いろいろな布、素材をコーヒー染めして比較したい",
-    "他の草木染めもやってみたい"
+    "他の草木染めもやってみたい",
   ],
-  "media": [
+  media: [
     {
-      "type": "image",
-      "src": "/logs/coffeezome-003/IMG_2525.jpg",
-      "caption": "右のたたんであるのが前回のオックス。それより濃く染まってる"
+      type: "image",
+      src: "/logs/coffeezome-003/IMG_2525.jpg",
+      caption: "右のたたんであるのが前回のオックス。それより濃く染まってる",
     },
     {
-      "type": "image",
-      "src": "/logs/coffeezome-003/IMG_2526.jpg",
-      "caption": "多少のムラはあるけど全然OK"
+      type: "image",
+      src: "/logs/coffeezome-003/IMG_2526.jpg",
+      caption: "多少のムラはあるけど全然OK",
     },
     {
-      "type": "image",
-      "src": "/logs/coffeezome-003/IMG_2531.jpg",
-      "caption": "アップ"
+      type: "image",
+      src: "/logs/coffeezome-003/IMG_2531.jpg",
+      caption: "アップ",
     },
     {
-      "type": "image",
-      "src": "/logs/coffeezome-003/IMG_2532.jpg",
-      "caption": "アップ２"
-    }
+      type: "image",
+      src: "/logs/coffeezome-003/IMG_2532.jpg",
+      caption: "アップ２",
+    },
   ],
-  "log": [],
-  "related": [
+
+  related: [
     {
-      "kind": "external",
-      "title": "Youtube",
-      "url": "https://www.youtube.com/watch?v=BbhiTlV-4AI"
-    }
-  ]
+      kind: "external",
+      title: "Youtube",
+      url: "https://www.youtube.com/watch?v=BbhiTlV-4AI",
+    },
+  ],
 };
