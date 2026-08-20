@@ -6,7 +6,7 @@ export const tamanegisome001 = {
   createdAt: "2026-08-19",
 
   title: "玉ねぎ染め #1",
-  category: "染色",
+  category: "染物",
   details: [
     { label: "生地", value: "シーチング 1m × 1m、174g" },
     {

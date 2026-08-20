@@ -5,7 +5,7 @@ export const allseasonscoffee001 = {
   type: "experience",
   createdAt: "2026-08-11",
   title: "ALL SEASONS COFFEE（新宿御苑）",
-  category: "コーヒーショップ",
+  category: "コーヒー店",
 
   details: [
     { label: "店舗", value: "ALL SEASONS COFFEE 新宿御苑" },

@@ -6,7 +6,7 @@ export const baisen011 = {
   createdAt: "2026-08-07",
 
   title: "手鍋焙煎 #11|ブラジル S18 No.2|深煎り",
-  category: "手鍋焙煎",
+  category: "焙煎",
   details: [
     { label: "豆", value: "ブラジル S18 No.2" },
     { label: "焙煎前", value: "138g" },

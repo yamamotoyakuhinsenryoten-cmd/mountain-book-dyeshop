@@ -6,7 +6,7 @@ export const bench001 = {
   createdAt: "2026-08-19",
 
   title: "the BENCH コーヒースタンド(千歳烏山)#1",
-  category: "コーヒーショップ訪問",
+  category: "コーヒー店",
   details: [
     { label: "訪問日", value: "2026/8/14" },
     { label: "注文", value: "ハンドドリップコーヒー、浅煎りブレンド" },

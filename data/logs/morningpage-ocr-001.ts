@@ -5,7 +5,7 @@ export const morningpageocr001 = {
   type: "development",
   createdAt: "2026-08-07",
   title: "モーニングページOCRを試す",
-  category: "AI活用",
+  category: "AI",
   markdown: `# AIでモーニングページ分析を試す
 
 ## やりたいこと

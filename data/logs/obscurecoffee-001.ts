@@ -5,7 +5,7 @@ export const obscurecoffee001: Log = {
   type: "experience",
   createdAt: "2026-07-21",
   title: "ObscureCoffee(渋谷) #1",
-  category: "コーヒーショップ",
+  category: "コーヒー店",
   details: [
     {
       label: "名前",
