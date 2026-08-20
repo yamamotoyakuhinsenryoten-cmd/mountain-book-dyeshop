@@ -11,20 +11,19 @@ export default function LogDetail({ log }: Props) {
       <div className="back-link">
         <a href="/logs">← Logs</a>
       </div>
-      {log.type === "work" ||
-        (log.type === "experience" && (
-          <section>
-            <h2>Info</h2>
+      {(log.type === "work" || log.type === "experience") && (
+        <section>
+          <h2>Info</h2>
 
-            <ul>
-              {log.details.map((item) => (
-                <li key={item.label}>
-                  {item.label}: {item.value}
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+          <ul>
+            {log.details.map((item) => (
+              <li key={item.label}>
+                {item.label}: {item.value}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       {(log.type === "work" || log.type === "experience") &&
         log.insights.length > 0 && (
           <section>
