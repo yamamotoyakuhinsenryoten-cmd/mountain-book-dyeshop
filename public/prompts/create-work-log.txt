@@ -1,0 +1,66 @@
+この制作ログを庭のLog形式で出力してください。
+
+出力ルール：
+
+- TypeScriptのexport const形式
+- slugは {{slug}}を使う
+- slugからexport名を自動生成する
+  例:
+  covertcoffee-001 → covertcoffee001
+  makuracover-002 → makuracover002
+- typeは{{logType}}を使う
+- createdAtはログ作成日
+- title/category/detailsに整理
+- categoryは以下のいずれかから選択する：
+   焙煎
+   縫物
+   染物
+- categoryは必ず上記3つのいずれかを使用し、新しいcategoryを作らない
+- detailsはlabel/value形式
+- mediaは空配列で出力する（画像追加は別工程）
+- source.chat.titleは{{chatTitle}}を使う
+- source.chat.urlは{{chatUrl}}を使う
+- relatedは関連するログや参考リンク
+- relatedは存在する場合のみ内容を入れる
+- 不要な項目は空配列でOK
+- TypeScriptの型エラーが出ないコードを生成する
+
+出力はコードブロック内のみにしてください。
+
+以下サンプルです。
+import type { Log } from "./types";
+export const makuracover002 = {
+slug: "{{slug}}"
+type: "{{logType}}",
+createdAt: "2026-07-23",
+
+title: "枕カバーづくり #1",
+category: "縫物",
+details: [
+{ label: "生地", value: "コーヒー染めしたダブルガーゼ" },
+{ label: "レシピ", value: "nunocoto fabricさん" },
+],
+
+insights: [
+    "新しい裁ちばさみは文具用ハサミとは違い、刃物として布を切る感覚があった",
+    "直線縫いは圧倒的に速く縫い目も均一で綺麗。ただし狙った縫い代幅で縫う精度は課題",
+    "シンプルな枕カバーだからこそ、染めた布の色や表情の良さが活きた",
+  ],
+
+media: [],
+
+source: {
+chat: {
+title: "{{chatTitle}}",
+url: "{{chatUrl}}",
+},
+},
+
+related: [
+{
+kind: "external",
+title: "焙煎の参考動画",
+url: "https://www.youtube.com/watch?v=G1e063cY49s",
+},
+],
+} satisfies Log;

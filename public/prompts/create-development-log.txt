@@ -1,0 +1,168 @@
+この制作ログを庭のLog形式で出力してください。
+
+出力ルール：
+
+- TypeScriptのexport const形式
+- slugは {{slug}}を使う
+- slugからexport名を自動生成する
+  例:
+  covertcoffee-001 → covertcoffee001
+  makuracover-002 → makuracover002
+- typeは{{logType}}を使う
+- createdAtはログ作成日
+- title/categoryに整理
+- categoryは以下のいずれかから選択する：
+   AI
+- categoryは必ず上記のいずれかを使用し、新しいcategoryを作らない
+- markdownは以下の固定フォーマットで出力する
+- 見出しを追加・削除・変更しない
+- チャットの内容に該当する情報がない場合は、そのセクションを空欄または「特になし」とする
+- 各セクションの内容は、チャット内の発言や試行錯誤をもとに整理する
+- 元のチャットにない事実や結果を推測して追加しない
+- チャット内で考え方が変わった場合は、「分かったこと」や「次に試すこと」など適切なセクションに反映する
+
+Markdownの形式：
+
+# {{title}}
+
+## やりたいこと
+
+ここに、このログでやろうとしたことを整理する。
+
+## 試したこと
+
+ここに、実際に試したことを整理する。
+
+## 結果
+
+ここに、試した結果を整理する。
+
+## 分かったこと
+
+ここに、試して分かったこと・気づいたことを整理する。
+
+## 次に試すこと
+
+ここに、今後試したいことや残っている課題を整理する。
+- mediaは空配列で出力する（画像追加は別工程）
+- source.chat.titleは{{chatTitle}}を使う
+- source.chat.urlは{{chatUrl}}を使う
+- relatedは関連するログや参考リンク
+- relatedは存在する場合のみ内容を入れる
+- 不要な項目は空配列でOK
+- TypeScriptの型エラーが出ないコードを生成する
+
+出力はコードブロック内のみにしてください。
+
+以下サンプルです。
+import type { DevelopmentLog } from "./types";
+
+export const defectbeansai001 = {
+  slug: "defect-beans-ai-001",
+  type: "development",
+  createdAt: "2026-08-04",
+  title: "AIでハンドピック補助を試す#1",
+  category: "AI",
+
+  media: [
+    {
+      type: "image",
+      src: "/logs/defect-beans-ai-001/img/top.jpg",
+      caption: "",
+    },
+    {
+      type: "image",
+      src: "/logs/defect-beans-ai-001/img/angle45.jpg",
+      caption: "",
+    },
+    {
+      type: "image",
+      src: "/logs/defect-beans-ai-001/img/angle45_2.jpg",
+      caption: "",
+    },
+    {
+      type: "image",
+      src: "/logs/defect-beans-ai-001/img/angle45_3.jpg",
+      caption: "",
+    },
+  ],
+  markdown: `
+# AIでハンドピック補助を試す#1
+## やりたいこと
+
+手鍋焙煎では150g程度の豆でもハンドピックに15分ほどかかる。
+この作業をAIで補助できないか試してみる。
+
+## 試したこと1：欠点豆の分類
+
+まず、自分が過去に除去した欠点豆を分類した。
+
+分類：
+
+- 虫食い・カビ疑い
+- 黒っぽい変色
+- 黄色・白っぽい
+- ピーベリー
+- 割れ・欠け
+- 小さい豆
+- 形状異常・シワなど
+
+分類ごとに白い紙の上へ並べて撮影し、AIへ参考画像として渡した。
+
+## 試したこと2：AI判定環境を作成
+
+ChatGPTへ直接画像を送る方法では制限があるため、
+PythonからOpenAI APIを利用して画像判定する仕組みを作った。
+
+判定結果はTSV形式で出力し、
+スプレッドシートで自分の判断と比較できるようにした。
+
+## 試したこと3：画像条件変更
+
+最初は真上から撮影した1枚画像で判定。
+
+結果：
+
+- 全体的な異常検知はできた
+- 虫食いなど側面情報が必要な欠点は見逃した
+
+そこで45度方向の画像を追加。
+
+結果：
+
+- 判断一致率は改善
+- ただし過剰検知も発生
+
+## 分かったこと
+
+AIは「怪しい豆を探す」ことはできるが、
+自分と同じ判断をするには参考画像の作り方が重要。
+
+特に：
+
+- 虫食いは多様なサンプルが必要
+- 小さい豆は単体画像ではなく、正常豆との比較が必要
+
+## 次に試すこと
+
+- 虫食いサンプルを増やす
+- 小さい豆の参考画像を比較形式に変更する
+- 100均の小分けケースで撮影方法を改善する
+
+目標：
+AIを完全自動判定にするのではなく、
+自分のハンドピック判断を補助する存在に近づける。
+`,
+  source: {
+    title: "画像認識による欠点豆判定",
+    url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a63db33-f310-83e8-a09b-88d062d0467d",
+  },
+
+  related: [
+    {
+      kind: "external",
+      title: "スプシでの判定結果比較",
+      url: "https://docs.google.com/spreadsheets/d/1BhEU1omFTI2ujuKsAljStusFpkxolnG-IIu_ro9j4XU/edit?gid=0#gid=0",
+    },
+  ],
+} satisfies DevelopmentLog;
