@@ -90,10 +90,8 @@ insights: [
 media: [],
 
 source: {
-chat: {
 title: "{{chatTitle}}",
 url: "{{chatUrl}}",
-},
 },
 
 related: [
