@@ -68,7 +68,7 @@
 
 
 サンプル：
-import type { Log } from "./types";
+import type { Log } from "../types";
 export const makuracover002 = {
 slug: "{{slug}}"
 type: "{{logType}}",

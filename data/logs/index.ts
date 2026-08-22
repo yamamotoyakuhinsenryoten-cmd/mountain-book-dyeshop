@@ -29,6 +29,8 @@ import { allseasonscoffee001 } from "./experience/all-seasons-coffee-001";
 import { bench001 } from "./experience/bench-001";
 import { tamanegisome001 } from "./work/tamanegisome-001";
 import { sirensblend001 } from "./experience/sirensblend-001";
+import { mbdyeshop001 } from "./development/mb-dyeshop-001";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -63,4 +65,5 @@ export const logs: Log[] = [
   bench001,
   tamanegisome001,
   sirensblend001,
+  mbdyeshop001,
 ];

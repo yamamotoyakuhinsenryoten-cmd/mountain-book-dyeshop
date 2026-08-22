@@ -13,6 +13,7 @@
 - title/categoryに整理
 - categoryは以下のいずれかから選択する：
    AI
+   Webサイト構築
 - categoryは必ず上記のいずれかを使用し、新しいcategoryを作らない
 - markdownは以下の固定フォーマットで出力する
 - 見出しを追加・削除・変更しない
@@ -55,7 +56,7 @@ Markdownの形式：
 出力はコードブロック内のみにしてください。
 
 以下サンプルです。
-import type { DevelopmentLog } from "./types";
+import type { DevelopmentLog } from "../types";
 
 export const defectbeansai001 = {
   slug: "defect-beans-ai-001",
