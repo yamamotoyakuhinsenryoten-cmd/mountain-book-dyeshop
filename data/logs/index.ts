@@ -30,6 +30,7 @@ import { bench001 } from "./experience/bench-001";
 import { tamanegisome001 } from "./work/tamanegisome-001";
 import { sirensblend001 } from "./experience/sirensblend-001";
 import { mbdyeshop001 } from "./development/mb-dyeshop-001";
+import { covertcoffee002 } from "./experience/covertcoffee-002";
 
 import { Log } from "./types";
 
@@ -66,4 +67,5 @@ export const logs: Log[] = [
   tamanegisome001,
   sirensblend001,
   mbdyeshop001,
+  covertcoffee002,
 ];
