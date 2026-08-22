@@ -4,13 +4,13 @@ export const mbdyeshop001 = {
   slug: "mb-dyeshop-001",
   type: "development",
   createdAt: "2026-08-22",
-  title: "Google Driveからログメディアを取り込む仕組みを作る",
+  title: "サイト用画像・動画のダウンロード＆配置の自動化",
   category: "Webサイト構築",
 
   media: [],
 
   markdown: `
-# Google Driveからログメディアを取り込む仕組みを作る
+# サイト用画像・動画のダウンロード＆配置の自動化
 
 ## やりたいこと
 
