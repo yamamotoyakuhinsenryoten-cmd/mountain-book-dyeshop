@@ -20,7 +20,7 @@ import { aroha002 } from "./work/aroha-002";
 import { halfpants001 } from "./work/halfpants-001";
 import { obscurecoffee001 } from "./experience/obscurecoffee-001";
 import { makuracover002 } from "./work/makuracover-002";
-import { covertcoffee001 } from "./work/covertcoffee-001";
+import { covertcoffee001 } from "./experience/covertcoffee-001";
 import { defectbeansai001 } from "./development/defect-beans-ai-001";
 import { defectbeansai002 } from "./development/defect-beans-ai-002";
 import { householdbudget001 } from "./development/house-hold-budget-001";

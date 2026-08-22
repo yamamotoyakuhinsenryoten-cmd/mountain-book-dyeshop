@@ -7,13 +7,12 @@
 3. data/logs/index.ts に追加
 4. npm run build で確認
 
-## 画像追加
+## メディア追加
 
 1. スマホからGoogle Driveへアップロード
-2. PCへダウンロード
-3. 画像をlogs/[slug]/imgへ配置
-4. スクリプト実行 node scripts/generate-log-media.js [slug]
-5. パスをmediaへ追加
+2. スクリプト実行 node scripts/download-log-media.js [slug]
+3. スクリプト実行 node scripts/generate-log-media.js [slug]
+4. パスをmediaへ追加
 
 ## 開発環境
 
