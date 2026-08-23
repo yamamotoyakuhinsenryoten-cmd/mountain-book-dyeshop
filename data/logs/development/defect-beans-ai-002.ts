@@ -5,10 +5,10 @@ export const defectbeansai002 = {
   type: "development",
   createdAt: "2026-08-05",
 
-  title: "AIでハンドピック補助を試す #2",
+  title: "AIによるハンドピック補助 #2 | referenceの改善と判定精度の検証",
   category: "AI",
   markdown: `
-# AIでハンドピック補助を試す#2
+# AIによるハンドピック補助 #2 | referenceの改善と判定精度の検証
 ## やりたいこと
 
 前回作成した欠点豆判定AIについて、

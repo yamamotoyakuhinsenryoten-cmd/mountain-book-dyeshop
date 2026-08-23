@@ -4,7 +4,7 @@ export const defectbeansai001 = {
   slug: "defect-beans-ai-001",
   type: "development",
   createdAt: "2026-08-04",
-  title: "AIでハンドピック補助を試す#1",
+  title: "AIによるハンドピック補助 #1 | AI画像判定の検証",
   category: "AI",
 
   media: [
@@ -30,7 +30,7 @@ export const defectbeansai001 = {
     },
   ],
   markdown: `
-# AIでハンドピック補助を試す#1
+# AIによるハンドピック補助 #1 | AI画像判定の検証
 ## やりたいこと
 
 手鍋焙煎では150g程度の豆でもハンドピックに15分ほどかかる。
