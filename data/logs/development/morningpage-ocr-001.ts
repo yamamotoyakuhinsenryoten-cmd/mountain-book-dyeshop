@@ -4,9 +4,9 @@ export const morningpageocr001 = {
   slug: "morningpage-ocr-001",
   type: "development",
   createdAt: "2026-08-07",
-  title: "モーニングページOCRを試す",
+  title: "モーニングページOCR分析 #1",
   category: "AI",
-  markdown: `# AIでモーニングページ分析を試す
+  markdown: `# モーニングページOCR分析 #1
 
 ## やりたいこと
 
