@@ -35,6 +35,7 @@ import { morningpageocr002 } from "./development/morningpage-ocr-002";
 import { morningpageocr003 } from "./development/morningpage-ocr-003";
 import { taperedpants001 } from "./work/taperedpants-001";
 import { baisen012 } from "./work/baisen-012";
+import { cafeb13001 } from "./experience/cafe-b13-001";
 
 import { Log } from "./types";
 
@@ -76,4 +77,5 @@ export const logs: Log[] = [
   morningpageocr003,
   taperedpants001,
   baisen012,
+  cafeb13001,
 ];
