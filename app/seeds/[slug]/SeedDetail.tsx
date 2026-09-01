@@ -13,21 +13,62 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
   const [logType, setLogType] = useState<"work" | "experience" | "development">(
     "work",
   );
+
   const [promptSlug, setPromptSlug] = useState(
     slug === "generate-log" ? "" : slug,
   );
+
   const [chatTitle, setChatTitle] = useState("");
   const [chatUrl, setChatUrl] = useState("");
 
+  // ChatGPTの回答
+  const [answer, setAnswer] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // プロンプト生成
+  const buildPrompt = async () => {
+    return await buildLogPrompt(logType, promptSlug, chatTitle, chatUrl);
+  };
+
+  // プロンプトをコピー
   const handleCopy = async () => {
-    const prompt = await buildLogPrompt(
-      logType,
-      promptSlug,
-      chatTitle,
-      chatUrl,
-    );
+    const prompt = await buildPrompt();
 
     await navigator.clipboard.writeText(prompt);
+  };
+
+  // ChatGPTで実行
+  const handleRun = async () => {
+    const prompt = await buildPrompt();
+
+    setLoading(true);
+    setAnswer("");
+
+    try {
+      const response = await fetch("/api/run-chatgpt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt,
+          chatUrl,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("API request failed");
+      }
+
+      const data = await response.json();
+
+      setAnswer(data.answer);
+    } catch (error) {
+      console.error(error);
+      setAnswer("エラーが発生しました");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -55,6 +96,7 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
                 <option value="development">Development</option>
               </select>
             </label>
+
             <label className="block text-sm text-gray-700">
               slug
               <input
@@ -83,14 +125,34 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
               />
             </label>
 
-            <button
-              className="rounded bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-              onClick={handleCopy}
-            >
-              プロンプトをコピー
-            </button>
+            <div className="flex gap-3">
+              <button
+                className="rounded bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-700"
+                onClick={handleCopy}
+              >
+                プロンプトをコピー
+              </button>
+
+              <button
+                className="rounded bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-700 disabled:opacity-50"
+                onClick={handleRun}
+                disabled={loading}
+              >
+                {loading ? "実行中..." : "ChatGPTで実行"}
+              </button>
+            </div>
           </div>
         </section>
+
+        {answer && (
+          <section className="space-y-2">
+            <h2 className="text-base">ChatGPTの回答</h2>
+
+            <pre className="whitespace-pre-wrap rounded border border-gray-300 p-4 text-sm">
+              {answer}
+            </pre>
+          </section>
+        )}
       </div>
     </main>
   );
