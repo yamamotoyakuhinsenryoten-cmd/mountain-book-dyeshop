@@ -53,6 +53,8 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
         body: JSON.stringify({
           prompt,
           chatUrl,
+          logType,
+          slug: promptSlug,
         }),
       });
 
@@ -91,9 +93,9 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
                   )
                 }
               >
-                <option value="work">Work</option>
-                <option value="experience">Experience</option>
-                <option value="development">Development</option>
+                <option value="work">work</option>
+                <option value="experience">experience</option>
+                <option value="development">development</option>
               </select>
             </label>
 

@@ -18,8 +18,8 @@
 - categoryは必ず上記3つのいずれかを使用し、新しいcategoryを作らない
 - detailsはlabel/value形式
 - mediaは空配列で出力する（画像追加は別工程）
-- source.chat.titleは{{chatTitle}}を使う
-- source.chat.urlは{{chatUrl}}を使う
+- source.titleは{{chatTitle}}を使う
+- source.urlは{{chatUrl}}を使う
 - relatedは関連するログや参考リンク
 - relatedは存在する場合のみ内容を入れる
 - 不要な項目は空配列でOK
@@ -91,7 +91,7 @@
 
 サンプル：
 import type { Log } from "../types";
-export const makuracover002 = {
+export const makuracover002: Log= {
 slug: "{{slug}}"
 type: "{{logType}}",
 createdAt: "2026-07-23",

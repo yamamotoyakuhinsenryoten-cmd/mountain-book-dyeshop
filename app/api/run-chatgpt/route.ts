@@ -1,7 +1,9 @@
 import { chromium } from "playwright";
+import { writeFile } from "fs/promises";
+import path from "path";
 
 export async function POST(request: Request) {
-  const { prompt, chatUrl } = await request.json();
+  const { prompt, chatUrl, logType, slug } = await request.json();
 
   const browser = await chromium.connectOverCDP("http://localhost:9222");
 
@@ -25,7 +27,24 @@ export async function POST(request: Request) {
 
   const answer = await answers.last().innerText();
 
+  const code = answer
+    .replace(/^```[^\n]*\n/, "")
+    .replace(/^TypeScript\s*\n/, "")
+    .replace(/\n```$/, "")
+    .trim();
+
+  const filePath = path.join(
+    process.cwd(),
+    "data",
+    "logs",
+    logType,
+    `${slug}.ts`,
+  );
+
+  await writeFile(filePath, code, "utf-8");
+
   return Response.json({
-    answer,
+    answer: code,
+    filePath,
   });
 }
