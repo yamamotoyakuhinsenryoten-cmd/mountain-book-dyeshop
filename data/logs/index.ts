@@ -34,6 +34,7 @@ import { covertcoffee002 } from "./experience/covertcoffee-002";
 import { morningpageocr002 } from "./development/morningpage-ocr-002";
 import { morningpageocr003 } from "./development/morningpage-ocr-003";
 import { taperedpants001 } from "./work/taperedpants-001";
+import { baisen012 } from "./work/baisen-012";
 
 import { Log } from "./types";
 
@@ -74,4 +75,5 @@ export const logs: Log[] = [
   morningpageocr002,
   morningpageocr003,
   taperedpants001,
+  baisen012,
 ];
