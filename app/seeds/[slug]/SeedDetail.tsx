@@ -25,6 +25,10 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // メディア追加
+  const [mediaLoading, setMediaLoading] = useState(false);
+  const [mediaMessage, setMediaMessage] = useState("");
+
   // プロンプト生成
   const buildPrompt = async () => {
     return await buildLogPrompt(logType, promptSlug, chatTitle, chatUrl);
@@ -70,6 +74,43 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
       setAnswer("エラーが発生しました");
     } finally {
       setLoading(false);
+    }
+  };
+
+  // メディアを追加
+  const handleAddMedia = async () => {
+    if (!promptSlug) {
+      setMediaMessage("slugを入力してください");
+      return;
+    }
+
+    setMediaLoading(true);
+    setMediaMessage("");
+
+    try {
+      const response = await fetch("/api/add-log-media", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          slug: promptSlug,
+          logType,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "メディアの追加に失敗しました");
+      }
+
+      setMediaMessage(`${data.media.length}件のメディアを追加しました`);
+    } catch (error) {
+      console.error(error);
+      setMediaMessage("メディアの追加に失敗しました");
+    } finally {
+      setMediaLoading(false);
     }
   };
 
@@ -127,7 +168,7 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
               />
             </label>
 
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               <button
                 className="rounded bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-700"
                 onClick={handleCopy}
@@ -142,7 +183,19 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
               >
                 {loading ? "実行中..." : "ChatGPTで実行"}
               </button>
+
+              <button
+                className="rounded bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-700 disabled:opacity-50"
+                onClick={handleAddMedia}
+                disabled={mediaLoading}
+              >
+                {mediaLoading ? "メディア追加中..." : "メディアを追加"}
+              </button>
             </div>
+
+            {mediaMessage && (
+              <p className="text-sm text-gray-600">{mediaMessage}</p>
+            )}
           </div>
         </section>
 
