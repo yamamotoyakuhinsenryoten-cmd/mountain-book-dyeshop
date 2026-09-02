@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { writeFile } from "fs/promises";
+import { writeFile, readFile } from "fs/promises";
 import { spawn } from "child_process";
 import path from "path";
 
@@ -40,6 +40,41 @@ async function waitForChrome() {
   }
 
   throw new Error("Chromeの起動に失敗しました");
+}
+
+async function updateLogsIndex(logType: string, slug: string, code: string) {
+  const exportMatch = code.match(/export const (\w+)/);
+
+  if (!exportMatch) {
+    throw new Error("ログのexport名を取得できませんでした");
+  }
+
+  const exportName = exportMatch[1];
+
+  const indexPath = path.join(process.cwd(), "data", "logs", "index.ts");
+
+  let indexCode = await readFile(indexPath, "utf-8");
+
+  const importLine = `import { ${exportName} } from "./${logType}/${slug}";`;
+
+  // importを追加
+  if (!indexCode.includes(importLine)) {
+    const logTypeImport = `${importLine}\n`;
+
+    indexCode = indexCode.replace(
+      /import \{ Log \} from "\.\/types";/,
+      `${logTypeImport}import { Log } from "./types";`,
+    );
+  }
+
+  // logs配列に追加
+  const logEntry = `  ${exportName},`;
+
+  if (!indexCode.includes(logEntry)) {
+    indexCode = indexCode.replace(/(\n\];)/, `\n${logEntry}$1`);
+  }
+
+  await writeFile(indexPath, indexCode, "utf-8");
 }
 
 export async function POST(request: Request) {
@@ -98,6 +133,9 @@ export async function POST(request: Request) {
     );
 
     await writeFile(filePath, code, "utf-8");
+
+    // logs/index.tsを更新
+    await updateLogsIndex(logType, slug, code);
 
     return Response.json({
       answer: code,
