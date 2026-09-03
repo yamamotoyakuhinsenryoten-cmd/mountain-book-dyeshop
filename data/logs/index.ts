@@ -39,6 +39,7 @@ import { cafeb13001 } from "./experience/cafe-b13-001";
 import { mbdyeshop002 } from "./development/mb-dyeshop-002";
 
 import { mbdyeshop003 } from "./development/mb-dyeshop-003";
+import { mbdyeshop004 } from "./development/mb-dyeshop-004";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -82,4 +83,5 @@ export const logs: Log[] = [
   cafeb13001,
   mbdyeshop002,
   mbdyeshop003,
+  mbdyeshop004,
 ];
