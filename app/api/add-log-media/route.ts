@@ -54,15 +54,48 @@ export async function POST(request: Request) {
       )
       .join(",\n");
 
-    const mediaBlock = `media: [\n${mediaCode}\n  ],`;
+    const mediaBlock = `media: [\n${mediaCode}\n  ]`;
 
-    const mediaRegex = /media:\s*\[[\s\S]*?\n\s*\],/;
+    // media: [ ... ] の開始位置を探す
+    const mediaStart = code.indexOf("media: [");
 
-    if (!mediaRegex.test(code)) {
+    if (mediaStart === -1) {
       throw new Error("ログTSにmedia配列が見つかりませんでした");
     }
 
-    code = code.replace(mediaRegex, mediaBlock);
+    // media配列の "[" を取得
+    const arrayStart = code.indexOf("[", mediaStart);
+
+    if (arrayStart === -1) {
+      throw new Error("media配列の開始位置が見つかりませんでした");
+    }
+
+    // ネストした [] も考慮して、media配列の対応する "]" を探す
+    let depth = 0;
+    let mediaEnd = -1;
+
+    for (let i = arrayStart; i < code.length; i++) {
+      if (code[i] === "[") {
+        depth++;
+      } else if (code[i] === "]") {
+        depth--;
+
+        if (depth === 0) {
+          mediaEnd = i + 1;
+          break;
+        }
+      }
+    }
+
+    if (mediaEnd === -1) {
+      throw new Error("media配列の終端が見つかりませんでした");
+    }
+
+    // media配列だけを置換する
+    const before = code.slice(0, mediaStart);
+    const after = code.slice(mediaEnd);
+
+    code = `${before}${mediaBlock}${after}`;
 
     await writeFile(filePath, code, "utf-8");
 
