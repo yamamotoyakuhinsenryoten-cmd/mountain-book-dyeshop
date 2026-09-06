@@ -40,6 +40,7 @@ import { mbdyeshop002 } from "./development/mb-dyeshop-002";
 
 import { mbdyeshop003 } from "./development/mb-dyeshop-003";
 import { mbdyeshop004 } from "./development/mb-dyeshop-004";
+import { fukueicoffee001 } from "./experience/fukueicoffee-001";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -84,4 +85,5 @@ export const logs: Log[] = [
   mbdyeshop002,
   mbdyeshop003,
   mbdyeshop004,
+  fukueicoffee001,
 ];
