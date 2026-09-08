@@ -1,6 +1,11 @@
 import { google } from "googleapis";
 import fs from "fs";
 import path from "path";
+import sharp from "sharp";
+import convert from "heic-convert";
+
+const MAX_SIZE = 2400;
+const QUALITY = 85;
 
 const auth = new google.auth.GoogleAuth({
   keyFile: "credentials/mountain-book-dyeshop-8fa756f38c7c.json",
@@ -73,41 +78,109 @@ export async function downloadLogMedia(slug: string) {
       continue;
     }
 
-    let outputDir: string;
-
+    // -----------------------------
+    // 画像
+    // -----------------------------
     if (file.mimeType.startsWith("image/")) {
-      outputDir = imgDir;
-    } else if (file.mimeType.startsWith("video/")) {
-      outputDir = vidDir;
-    } else {
-      console.log(`スキップ: ${file.name} (${file.mimeType})`);
+      const outputName = file.name.replace(/\.(jpg|jpeg|heic|heif)$/i, ".jpg");
+
+      const outputPath = path.join(imgDir, outputName);
+
+      if (fs.existsSync(outputPath)) {
+        console.log(`スキップ（既存）: ${outputName}`);
+        continue;
+      }
+
+      console.log(`画像ダウンロード: ${file.name}`);
+
+      const response = await drive.files.get(
+        {
+          fileId: file.id,
+          alt: "media",
+        },
+        {
+          responseType: "arraybuffer",
+        },
+      );
+
+      const inputBuffer = Buffer.from(response.data as ArrayBuffer);
+      const beforeSize = inputBuffer.length;
+
+      let imageBuffer = inputBuffer;
+
+      // HEIC / HEIF → JPEG
+      if (/\.(heic|heif)$/i.test(file.name)) {
+        console.log("  → HEIC/HEIFをJPEGへ変換");
+
+        const converted = await convert({
+          buffer: inputBuffer,
+          format: "JPEG",
+          quality: 1,
+        });
+
+        imageBuffer = Buffer.from(converted);
+      }
+
+      // 2400px / quality 85 / mozjpeg
+      await sharp(imageBuffer)
+        .rotate()
+        .resize({
+          width: MAX_SIZE,
+          height: MAX_SIZE,
+          fit: "inside",
+          withoutEnlargement: true,
+        })
+        .jpeg({
+          quality: QUALITY,
+          mozjpeg: true,
+        })
+        .toFile(outputPath);
+
+      const afterSize = fs.statSync(outputPath).size;
+      const reduction = (1 - afterSize / beforeSize) * 100;
+
+      console.log(
+        `  → ${outputName} ` +
+          `${(beforeSize / 1024 / 1024).toFixed(2)} MB → ` +
+          `${(afterSize / 1024 / 1024).toFixed(2)} MB ` +
+          `(${reduction.toFixed(1)}%削減)`,
+      );
+
       continue;
     }
 
-    const outputPath = path.join(outputDir, file.name);
+    // -----------------------------
+    // 動画
+    // -----------------------------
+    if (file.mimeType.startsWith("video/")) {
+      const outputPath = path.join(vidDir, file.name);
 
-    if (fs.existsSync(outputPath)) {
-      console.log(`スキップ（既存）: ${file.name}`);
+      if (fs.existsSync(outputPath)) {
+        console.log(`スキップ（既存）: ${file.name}`);
+        continue;
+      }
+
+      console.log(`動画ダウンロード: ${file.name}`);
+
+      const response = await drive.files.get(
+        {
+          fileId: file.id,
+          alt: "media",
+        },
+        {
+          responseType: "arraybuffer",
+        },
+      );
+
+      fs.writeFileSync(outputPath, Buffer.from(response.data as ArrayBuffer));
+
       continue;
     }
 
-    console.log(`ダウンロード: ${file.name}`);
-
-    const response = await drive.files.get(
-      {
-        fileId: file.id,
-        alt: "media",
-      },
-      {
-        responseType: "stream",
-      },
-    );
-
-    const dest = fs.createWriteStream(outputPath);
-
-    await new Promise<void>((resolve, reject) => {
-      response.data.pipe(dest).on("finish", resolve).on("error", reject);
-    });
+    // -----------------------------
+    // その他
+    // -----------------------------
+    console.log(`スキップ: ${file.name} (${file.mimeType})`);
   }
 
   console.log("\nダウンロード完了");
