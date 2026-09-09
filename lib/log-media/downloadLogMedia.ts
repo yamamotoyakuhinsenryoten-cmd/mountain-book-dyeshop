@@ -1,8 +1,8 @@
 import { google } from "googleapis";
-import fs from "fs";
-import path from "path";
 import sharp from "sharp";
 import convert from "heic-convert";
+
+import { uploadToR2 } from "@/lib/r2";
 
 const MAX_SIZE = 2400;
 const QUALITY = 85;
@@ -12,7 +12,12 @@ const auth = new google.auth.GoogleAuth({
   scopes: ["https://www.googleapis.com/auth/drive.readonly"],
 });
 
-export async function downloadLogMedia(slug: string) {
+type UploadedFile = {
+  name: string;
+  type: "image" | "video";
+};
+
+export async function downloadLogMedia(slug: string): Promise<UploadedFile[]> {
   if (!slug) {
     throw new Error("slugを指定してください");
   }
@@ -42,7 +47,9 @@ export async function downloadLogMedia(slug: string) {
       )
       .join(", ");
 
-    throw new Error(`フォルダ '${slug}' が複数見つかりました: ${folderList}`);
+    throw new Error(
+      `ログフォルダ '${slug}' が複数見つかりました: ${folderList}`,
+    );
   }
 
   const logFolder = folders[0];
@@ -63,14 +70,10 @@ export async function downloadLogMedia(slug: string) {
 
   if (!files || files.length === 0) {
     console.log("ファイルがありません");
-    return;
+    return [];
   }
 
-  const imgDir = path.join("public", "logs", slug, "img");
-  const vidDir = path.join("public", "logs", slug, "vid");
-
-  fs.mkdirSync(imgDir, { recursive: true });
-  fs.mkdirSync(vidDir, { recursive: true });
+  const uploadedFiles: UploadedFile[] = [];
 
   for (const file of files) {
     if (!file.id || !file.name || !file.mimeType) {
@@ -78,18 +81,12 @@ export async function downloadLogMedia(slug: string) {
       continue;
     }
 
-    // -----------------------------
+    // --------------------
     // 画像
-    // -----------------------------
+    // --------------------
     if (file.mimeType.startsWith("image/")) {
-      const outputName = file.name.replace(/\.(jpg|jpeg|heic|heif)$/i, ".jpg");
-
-      const outputPath = path.join(imgDir, outputName);
-
-      if (fs.existsSync(outputPath)) {
-        console.log(`スキップ（既存）: ${outputName}`);
-        continue;
-      }
+      const outputName = file.name.replace(/\.[^.]+$/i, ".jpg");
+      const r2Key = `logs/${slug}/img/${outputName}`;
 
       console.log(`画像ダウンロード: ${file.name}`);
 
@@ -121,8 +118,8 @@ export async function downloadLogMedia(slug: string) {
         imageBuffer = Buffer.from(converted);
       }
 
-      // 2400px / quality 85 / mozjpeg
-      await sharp(imageBuffer)
+      // リサイズ・JPEG圧縮
+      imageBuffer = await sharp(imageBuffer)
         .rotate()
         .resize({
           width: MAX_SIZE,
@@ -134,9 +131,9 @@ export async function downloadLogMedia(slug: string) {
           quality: QUALITY,
           mozjpeg: true,
         })
-        .toFile(outputPath);
+        .toBuffer();
 
-      const afterSize = fs.statSync(outputPath).size;
+      const afterSize = imageBuffer.length;
       const reduction = (1 - afterSize / beforeSize) * 100;
 
       console.log(
@@ -146,19 +143,24 @@ export async function downloadLogMedia(slug: string) {
           `(${reduction.toFixed(1)}%削減)`,
       );
 
+      // R2へアップロード
+      await uploadToR2(r2Key, imageBuffer, "image/jpeg");
+
+      uploadedFiles.push({
+        name: outputName,
+        type: "image",
+      });
+
+      console.log(`  → R2アップロード完了: ${r2Key}`);
+
       continue;
     }
 
-    // -----------------------------
+    // --------------------
     // 動画
-    // -----------------------------
+    // --------------------
     if (file.mimeType.startsWith("video/")) {
-      const outputPath = path.join(vidDir, file.name);
-
-      if (fs.existsSync(outputPath)) {
-        console.log(`スキップ（既存）: ${file.name}`);
-        continue;
-      }
+      const r2Key = `logs/${slug}/vid/${file.name}`;
 
       console.log(`動画ダウンロード: ${file.name}`);
 
@@ -172,16 +174,25 @@ export async function downloadLogMedia(slug: string) {
         },
       );
 
-      fs.writeFileSync(outputPath, Buffer.from(response.data as ArrayBuffer));
+      const videoBuffer = Buffer.from(response.data as ArrayBuffer);
+
+      // R2へアップロード
+      await uploadToR2(r2Key, videoBuffer, file.mimeType);
+
+      uploadedFiles.push({
+        name: file.name,
+        type: "video",
+      });
+
+      console.log(`  → R2アップロード完了: ${r2Key}`);
 
       continue;
     }
 
-    // -----------------------------
-    // その他
-    // -----------------------------
     console.log(`スキップ: ${file.name} (${file.mimeType})`);
   }
 
-  console.log("\nダウンロード完了");
+  console.log("\nダウンロード・R2アップロード完了");
+
+  return uploadedFiles;
 }

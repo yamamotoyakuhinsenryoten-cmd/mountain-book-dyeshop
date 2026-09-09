@@ -30,9 +30,9 @@ export async function POST(request: Request) {
       );
     }
 
-    await downloadLogMedia(slug);
+    const files = await downloadLogMedia(slug);
 
-    const media = generateLogMedia(slug);
+    const media = generateLogMedia(slug, files);
 
     const filePath = path.join(
       process.cwd(),

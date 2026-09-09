@@ -38,7 +38,7 @@ export const baisen001: Log = {
   media: [
     {
       type: "image",
-      src: "/logs/baisen-001/IMG_1847.jpg",
+      src: "https://pub-edd4c55b5661412ab9a93422d48dc4d6.r2.dev/logs/baisen-001/IMG_1847.jpg",
       caption: "Amazonで購入。1kgで3000円ほど",
     },
     {

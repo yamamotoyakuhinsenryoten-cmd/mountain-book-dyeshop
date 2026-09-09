@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Log } from "@/data/logs/types";
+import { getMediaUrl } from "@/lib/media";
 import ReactMarkdown from "react-markdown";
 
 type Props = { log: Log };
@@ -51,7 +52,7 @@ export default function LogDetail({ log }: Props) {
               return (
                 <div className="media" key={item.src}>
                   <Image
-                    src={item.src}
+                    src={getMediaUrl(item.src)}
                     alt={item.caption ?? ""}
                     width={800}
                     height={600}
@@ -64,7 +65,7 @@ export default function LogDetail({ log }: Props) {
               return (
                 <div className="media" key={item.src}>
                   <video
-                    src={item.src}
+                    src={getMediaUrl(item.src)}
                     controls
                     preload="metadata"
                     playsInline
