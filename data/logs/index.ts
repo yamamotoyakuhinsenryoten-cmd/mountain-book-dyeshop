@@ -40,11 +40,15 @@ import { mbdyeshop002 } from "./development/mb-dyeshop-002";
 
 import { mbdyeshop003 } from "./development/mb-dyeshop-003";
 import { mbdyeshop004 } from "./development/mb-dyeshop-004";
+import { mbdyeshop005 } from "./development/mb-dyeshop-005";
 import { fukueicoffee001 } from "./experience/fukueicoffee-001";
 import { shinkirocoffee001 } from "./experience/shinkirocoffee-001";
 import { lightnoteblend001 } from "./experience/lightnoteblend-001";
 // import { test001 } from "./work/test-001";
 
+import { mbdyeshop006 } from "./development/mb-dyeshop-006";
+import { mbdyeshop007 } from "./development/mb-dyeshop-007";
+import { mbdyeshop008 } from "./development/mb-dyeshop-008";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -89,8 +93,12 @@ export const logs: Log[] = [
   mbdyeshop002,
   mbdyeshop003,
   mbdyeshop004,
+  mbdyeshop005,
   fukueicoffee001,
   shinkirocoffee001,
   lightnoteblend001,
   // test001,
+  mbdyeshop006,
+  mbdyeshop007,
+  mbdyeshop008,
 ];
