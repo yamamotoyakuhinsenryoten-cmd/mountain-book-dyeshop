@@ -41,7 +41,15 @@ export type ExperienceLog = BaseLog & {
 
 export type DevelopmentLog = BaseLog & {
   type: "development";
-  markdown: string;
+  purpose: string;
+  policy: string;
+  steps: string[];
+  execution: {
+    title: string;
+    body: string;
+  }[];
+  result: string;
+  next: string[];
 };
 
 export type Log = WorkLog | ExperienceLog | DevelopmentLog;
