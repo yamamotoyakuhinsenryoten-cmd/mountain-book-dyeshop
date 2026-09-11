@@ -4,10 +4,6 @@ import { getMediaUrl } from "@/lib/media";
 
 const ACCESS_TOKEN = process.env.INSTAGRAM_ACCESS_TOKEN ?? "";
 
-if (!ACCESS_TOKEN) {
-  throw new Error("INSTAGRAM_ACCESS_TOKEN が設定されていません");
-}
-
 const API_VERSION = "v24.0";
 const BASE_URL = `https://graph.instagram.com/${API_VERSION}`;
 
@@ -131,6 +127,15 @@ function buildCaption(log: InstagramLog) {
 
 export async function POST(request: Request) {
   const totalStartTime = Date.now();
+
+  if (!ACCESS_TOKEN) {
+    return NextResponse.json(
+      {
+        error: "Instagram投稿機能はローカル環境でのみ利用できます",
+      },
+      { status: 403 },
+    );
+  }
 
   try {
     const body = await request.json();
