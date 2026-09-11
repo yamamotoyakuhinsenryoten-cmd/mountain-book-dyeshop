@@ -66,7 +66,8 @@ export const makuracover002 = {
   ],
 
   source: {
-    title: "枕カバー作成#1",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a266afe53948191b250c42ab2eae80d/c/6a5558c1-8b08-83ee-8d00-c15bcf1d64c4",
   },
 

@@ -69,7 +69,8 @@ export const shinkirocoffee001 = {
     },
   ],
   source: {
-    title: "蜃気楼珈琲",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/c/6a9caecf-d13c-83e8-84aa-90dfbabee7d1",
   },
 

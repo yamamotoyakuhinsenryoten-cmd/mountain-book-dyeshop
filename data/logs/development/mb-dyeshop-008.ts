@@ -85,7 +85,8 @@ Vercel本番環境でもR2上の画像が正常に表示されることを確認
   ],
 
   source: {
-    title: "R2メディア移行",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba-dev/c/6a9e5106-3414-83ee-bcad-d6986aa542a9",
   },
 

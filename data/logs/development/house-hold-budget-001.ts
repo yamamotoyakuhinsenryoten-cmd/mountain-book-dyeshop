@@ -114,7 +114,8 @@ AI向き：
   media: [],
 
   source: {
-    title: "AI家計分析",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a725fdf-2078-83ee-a0d4-d338cf8e02ac",
   },
 

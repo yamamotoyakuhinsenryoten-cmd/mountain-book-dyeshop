@@ -64,7 +64,8 @@ Google Driveのフォルダ構成とプロジェクト側の構成を無理に�
   media: [],
 
   source: {
-    title: "Webサイト構築 part6",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a88c641-b80c-83e8-b710-89a9bd7d0e1c",
   },
 

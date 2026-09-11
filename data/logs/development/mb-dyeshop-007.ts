@@ -83,7 +83,8 @@ public/logs自体はサイトのページから参照するため引き続きデ
   ],
 
   source: {
-    title: "デプロイサイズ調査",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba-dev/c/6a9e5152-76ac-83ee-ac97-f10395160bc8",
   },
 

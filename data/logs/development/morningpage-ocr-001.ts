@@ -99,7 +99,8 @@ C方式はOCRの弱点を画像で補えるため、分析用途では一番安�
   ],
 
   source: {
-    title: "モーニングページAIOCR",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/c/6a74f860-202c-83ee-be25-ecb4e0a6fb1a",
   },
 

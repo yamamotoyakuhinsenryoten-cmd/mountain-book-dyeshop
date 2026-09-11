@@ -56,7 +56,8 @@ export const bench001 = {
   ],
 
   source: {
-    title: "the BENCH コーヒースタンド",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a266a677fa88191a65e224de7327a25/c/6a7ee76a-0580-83e8-bd5a-73bcbfd2da02",
   },
 

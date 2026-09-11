@@ -178,7 +178,8 @@ export const aroha002 = {
   ],
 
   source: {
-    title: "260728_アロハシャツ作成#1",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "[https://chatgpt.com/g/g-p-6a266afe53948191b250c42ab2eae80d/c/6a652d7d-128c-83ee-92e6-8a488c1ed1eb](https://chatgpt.com/g/g-p-6a266afe53948191b250c42ab2eae80d/c/6a652d7d-128c-83ee-92e6-8a488c1ed1eb)",
   },
 

@@ -91,7 +91,8 @@ OCR準備についても、Google Drive APIを使って画像からtxtを作成�
   ],
 
   source: {
-    title: "モーニングページAIOCR",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a74f860-202c-83ee-be25-ecb4e0a6fb1a",
   },
 

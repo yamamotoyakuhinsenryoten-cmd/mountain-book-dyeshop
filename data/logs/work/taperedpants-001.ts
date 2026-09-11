@@ -130,7 +130,8 @@ export const taperedpants001 = {
   ],
 
   source: {
-    title: "大人シャツ制作",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a266afe53948191b250c42ab2eae80d/c/6a76477e-d454-83e8-bfdf-8b7e639570f0",
   },
 

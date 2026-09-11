@@ -58,7 +58,8 @@ export const cafeb13001 = {
   ],
 
   source: {
-    title: "Cafe B13",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/c/6a9231ef-d378-83ee-b82e-13e5f23ecb11",
   },
 

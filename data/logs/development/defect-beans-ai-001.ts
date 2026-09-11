@@ -103,7 +103,8 @@ ChatGPTへ直接画像を送る方法ではなく、OpenAI APIを利用して判
   ],
 
   source: {
-    title: "画像認識による欠点豆判定",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a63db33-f310-83e8-a09b-88d062d0467d",
   },
 

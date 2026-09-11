@@ -60,7 +60,8 @@ export const sirensblend001 = {
   ],
 
   source: {
-    title: "サイレンブレンド@スタバ",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a266a677fa88191a65e224de7327a25/c/6a77c8cb-50f0-83ee-a0ca-825388f496b7",
   },
 

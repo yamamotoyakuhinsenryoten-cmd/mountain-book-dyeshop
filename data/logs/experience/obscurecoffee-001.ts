@@ -65,5 +65,10 @@ export const obscurecoffee001: Log = {
       src: "/logs/obscurecoffee-001/vid/IMG_2773.mov",
     },
   ],
+  source: {
+    title: "生成元チャット",
+    service: "ChatGPT",
+    url: "https://chatgpt.com/g/g-p-6a266a677fa88191a65e224de7327a25-kohi/c/6a5db908-a384-83ee-94ff-30704f06c153",
+  },
   related: [],
 };

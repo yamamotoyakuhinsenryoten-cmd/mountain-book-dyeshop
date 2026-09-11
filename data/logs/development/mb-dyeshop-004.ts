@@ -53,7 +53,8 @@ export const mbdyeshop004 = {
   next: ["実際に運用してみて、さらに改善できる点がないか確認する"],
 
   source: {
-    title: "Media自動化",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a976fcc-3440-83e8-a4ac-415a379e4d68",
   },
 

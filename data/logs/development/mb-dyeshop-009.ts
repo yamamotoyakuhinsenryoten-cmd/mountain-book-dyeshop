@@ -71,7 +71,8 @@ DevelopmentLogの型、LogDetailの表示、CSS、既存ログ、ログ生成プ
   next: ["実運用で違和感が出た部分があればプロンプトを調整する"],
 
   source: {
-    title: "Webサイトログdev構造見直し",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba-dev/c/6a9e5176-e648-83ee-be38-208ab68769d8",
   },
 

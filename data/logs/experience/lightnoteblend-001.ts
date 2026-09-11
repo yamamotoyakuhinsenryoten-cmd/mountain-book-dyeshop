@@ -59,7 +59,8 @@ export const lightnoteblend001 = {
     },
   ],
   source: {
-    title: "ライトノートブレンド紹介",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/c/6a93f063-a1c0-83ee-b628-bac50da6e231",
   },
 

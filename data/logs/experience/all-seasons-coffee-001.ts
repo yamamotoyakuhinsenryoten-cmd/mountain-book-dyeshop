@@ -54,7 +54,8 @@ export const allseasonscoffee001 = {
   ],
 
   source: {
-    title: "オールシーズンズコーヒー",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a266a677fa88191a65e224de7327a25/c/6a69a529-7948-83e8-9654-4e9fff246346",
   },
 

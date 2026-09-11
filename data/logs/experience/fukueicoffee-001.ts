@@ -95,7 +95,8 @@ export const fukueicoffee001 = {
   ],
 
   source: {
-    title: "富久栄珈琲",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/c/6a97d658-c878-83ee-af94-20d3ef7a8121",
   },
 

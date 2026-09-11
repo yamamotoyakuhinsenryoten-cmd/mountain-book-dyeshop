@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const dataDir = path.join(process.cwd(), "src/data");
+const dataDir = path.join(process.cwd(), "data/logs/work");
 
 const files = fs
   .readdirSync(dataDir)
@@ -18,8 +18,12 @@ for (const file of files) {
   const original = content;
 
   content = content.replace(
-    /source: \{\n(\s*)title: "[^"]*",\n(\s*)url: ("[^"]*"),\n(\s*)\},/g,
-    `source: {\n$1title: "生成元チャット",\n$1service: "ChatGPT",\n$1url: $2,\n$1},`,
+    /source:\s*\{\s*title:\s*"[^"]*",\s*url:\s*"([^"]*)",\s*\}/g,
+    `source: {
+    title: "生成元チャット",
+    service: "ChatGPT",
+    url: "$1",
+  }`,
   );
 
   if (content !== original) {

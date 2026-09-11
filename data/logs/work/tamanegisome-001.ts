@@ -112,7 +112,8 @@ export const tamanegisome001 = {
   ],
 
   source: {
-    title: "玉ねぎ染め_260811",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a266aa14a5c8191a0a5962f2b65b7cf/c/6a6ed288-33b8-83ee-8009-9e6bf174b960",
   },
 

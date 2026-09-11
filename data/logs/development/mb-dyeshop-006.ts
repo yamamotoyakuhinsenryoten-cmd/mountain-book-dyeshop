@@ -94,7 +94,8 @@ Googleからダウンロードした元画像をそのままプロジェクト�
   ],
 
   source: {
-    title: "Vercel容量確認案内",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a9de212-afe8-83ee-b6b3-d7e487589141",
   },
 

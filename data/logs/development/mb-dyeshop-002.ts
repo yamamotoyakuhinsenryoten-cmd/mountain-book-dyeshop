@@ -55,7 +55,8 @@ PlaywrightからChatGPTを操作できることを確認できた。
   next: ["data/logs/index.tsへの追加を自動化する", "メディア追加を自動化する"],
 
   source: {
-    title: "Webサイト構築#8",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a89d907-c81c-83ee-ae91-eb7d55755f11",
   },
 

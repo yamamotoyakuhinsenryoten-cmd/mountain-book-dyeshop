@@ -54,7 +54,8 @@ logs配列にも作成したログを追加するようにした。`,
   next: ["運用してみて、さらに改善できる点がないか確認する"],
 
   source: {
-    title: "Index自動追加",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba/c/6a976f99-a470-83e8-ba44-9cb8bfebf32a",
   },
 

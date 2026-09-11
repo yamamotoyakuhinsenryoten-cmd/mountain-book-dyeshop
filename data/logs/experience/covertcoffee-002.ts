@@ -71,7 +71,8 @@ export const covertcoffee002 = {
   ],
 
   source: {
-    title: "コバートコーヒー再訪記録",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/c/6a855f91-1eec-83ee-91d9-3560e09abafc",
   },
 

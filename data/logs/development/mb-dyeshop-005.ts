@@ -56,7 +56,8 @@ TypeScriptからAPIを呼び出してアカウント情報を取得し、Instagr
     "運用しながら投稿内容、キャプション、ハッシュタグなどを調整する",
   ],
   source: {
-    title: "SNS自動配信",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: "https://chatgpt.com/g/g-p-6a44366d52488191bd77c3428f4029ba-dev/c/6a989365-d920-83ee-a3e1-97e6e113cf21",
   },
   related: [],
