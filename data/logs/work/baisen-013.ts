@@ -3,7 +3,7 @@ import type { Log } from "../types";
 export const baisen013: Log = {
   slug: "baisen-013",
   type: "work",
-  createdAt: "2026/9/11",
+  createdAt: "2026-09-11",
 
   title: "手鍋焙煎 #13|ニカラグア サンタアナ農園 SHG|中深煎り",
   category: "焙煎",
@@ -80,7 +80,7 @@ export const baisen013: Log = {
       type: "image",
       src: "/logs/baisen-013/img/IMG_3294.jpg",
       caption: "",
-    }
+    },
   ],
 
   source: {
@@ -92,7 +92,7 @@ export const baisen013: Log = {
   related: [
     {
       kind: "external",
-      title: "焙煎動画",
+      title: "Youtube",
       url: "https://www.youtube.com/watch?v=S5lbCCQSLa0",
     },
   ],
