@@ -49,6 +49,7 @@ import { lightnoteblend001 } from "./experience/lightnoteblend-001";
 import { mbdyeshop006 } from "./development/mb-dyeshop-006";
 import { mbdyeshop007 } from "./development/mb-dyeshop-007";
 import { mbdyeshop008 } from "./development/mb-dyeshop-008";
+import { mbdyeshop009 } from "./development/mb-dyeshop-009";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -101,4 +102,5 @@ export const logs: Log[] = [
   mbdyeshop006,
   mbdyeshop007,
   mbdyeshop008,
+  mbdyeshop009,
 ];
