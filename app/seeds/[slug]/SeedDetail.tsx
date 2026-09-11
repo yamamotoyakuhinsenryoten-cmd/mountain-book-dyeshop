@@ -18,7 +18,6 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
     slug === "generate-log" ? "" : slug,
   );
 
-  const [chatTitle, setChatTitle] = useState("");
   const [chatUrl, setChatUrl] = useState("");
 
   // ChatGPTの回答
@@ -31,7 +30,7 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
 
   // プロンプト生成
   const buildPrompt = async () => {
-    return await buildLogPrompt(logType, promptSlug, chatTitle, chatUrl);
+    return await buildLogPrompt(logType, promptSlug, chatUrl);
   };
 
   // プロンプトをコピー
@@ -146,15 +145,6 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
                 className="mt-1 block w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500"
                 value={promptSlug}
                 onChange={(event) => setPromptSlug(event.target.value)}
-              />
-            </label>
-
-            <label className="block text-sm text-gray-700">
-              Chat Title
-              <input
-                className="mt-1 block w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-gray-500"
-                value={chatTitle}
-                onChange={(event) => setChatTitle(event.target.value)}
               />
             </label>
 

@@ -1,7 +1,6 @@
 export async function buildLogPrompt(
   logType: string,
   slug: string,
-  chatTitle: string,
   chatUrl: string,
 ) {
   const promptFile = {
@@ -25,6 +24,5 @@ export async function buildLogPrompt(
   return template
     .replaceAll("{{logType}}", logType)
     .replaceAll("{{slug}}", slug)
-    .replaceAll("{{chatTitle}}", chatTitle)
     .replaceAll("{{chatUrl}}", chatUrl);
 }

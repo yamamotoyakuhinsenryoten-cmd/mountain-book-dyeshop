@@ -18,8 +18,6 @@
 - categoryは必ず上記3つのいずれかを使用し、新しいcategoryを作らない
 - detailsはlabel/value形式
 - mediaは空配列で出力する（画像追加は別工程）
-- source.titleは{{chatTitle}}を使う
-- source.urlは{{chatUrl}}を使う
 - relatedは関連するログや参考リンク
 - relatedは存在する場合のみ内容を入れる
 - 不要な項目は空配列でOK
@@ -27,6 +25,11 @@
 
 出力はコードブロック内のみにしてください。
 
+sourceについて：
+
+- source.titleは「生成元チャット」で固定する
+- source.serviceは「ChatGPT」で固定する
+- source.urlは{{chatUrl}}を使う
 
 
 ## detailsのルール
@@ -112,8 +115,9 @@ insights: [
 media: [],
 
 source: {
-title: "{{chatTitle}}",
-url: "{{chatUrl}}",
+  title: "生成元チャット",
+  service: "ChatGPT",
+  url: "{{chatUrl}}",
 },
 
 related: [

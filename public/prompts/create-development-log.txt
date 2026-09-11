@@ -101,7 +101,8 @@ mediaについて：
 
 sourceについて：
 
-- source.titleは{{chatTitle}}を使う
+- source.titleは「生成元チャット」で固定する
+- source.serviceは「ChatGPT」で固定する
 - source.urlは{{chatUrl}}を使う
 
 relatedについて：
@@ -198,10 +199,11 @@ OCR誤認識による間違いはあるものの、全体のテーマを把握�
     "制作活動の流れを追えるか確認する",
   ],
 
-  source: {
-    title: "{{chatTitle}}",
-    url: "{{chatUrl}}",
-  },
+source: {
+  title: "生成元チャット",
+  service: "ChatGPT",
+  url: "{{chatUrl}}",
+},
 
   related: [],
 } satisfies DevelopmentLog;

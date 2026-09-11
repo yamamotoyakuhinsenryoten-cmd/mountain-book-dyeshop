@@ -21,6 +21,7 @@ type BaseLog = {
 
   source?: {
     title: string;
+    service: string;
     url: string;
   };
 
