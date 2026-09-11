@@ -66,7 +66,8 @@ export const baisen011 = {
   ],
 
   source: {
-    title: "20260807手鍋焙煎",
+    title: "生成元チャット",
+    service: "ChatGPT",
     url: [
       "https://chatgpt.com/g/g-p-6a266a677fa88191a65e224de7327a25/c/",
       "6a74e93f-e9dc-83e8-9f96-ee58e520b79f",
