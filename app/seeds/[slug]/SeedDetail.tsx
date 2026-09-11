@@ -28,6 +28,10 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
   const [mediaLoading, setMediaLoading] = useState(false);
   const [mediaMessage, setMediaMessage] = useState("");
 
+  // Instagram投稿
+  const [instagramLoading, setInstagramLoading] = useState(false);
+  const [instagramMessage, setInstagramMessage] = useState("");
+
   // プロンプト生成
   const buildPrompt = async () => {
     return await buildLogPrompt(logType, promptSlug, chatUrl);
@@ -113,6 +117,47 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
     }
   };
 
+  // Instagramに投稿
+  const handlePostInstagram = async () => {
+    if (!promptSlug) {
+      setInstagramMessage("slugを入力してください");
+      return;
+    }
+
+    setInstagramLoading(true);
+    setInstagramMessage("");
+
+    try {
+      const response = await fetch("/api/post-instagram", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          slug: promptSlug,
+          logType,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Instagramへの投稿に失敗しました");
+      }
+
+      setInstagramMessage(`${data.imageCount}枚をInstagramへ投稿しました`);
+    } catch (error) {
+      console.error(error);
+
+      setInstagramMessage(
+        error instanceof Error
+          ? error.message
+          : "Instagramへの投稿に失敗しました",
+      );
+    } finally {
+      setInstagramLoading(false);
+    }
+  };
   return (
     <main className="max-w-2xl mx-auto p-8">
       <h1 className="text-xl mb-8">{seed.title}</h1>
@@ -181,10 +226,19 @@ export default function SeedDetail({ seed, slug }: SeedDetailProps) {
               >
                 {mediaLoading ? "メディア追加中..." : "メディアを追加"}
               </button>
+              <button
+                className="rounded bg-gray-900 px-4 py-2 text-sm text-white hover:bg-gray-700 disabled:opacity-50"
+                onClick={handlePostInstagram}
+                disabled={instagramLoading}
+              >
+                {instagramLoading ? "Instagram投稿中..." : "Instagramに投稿"}
+              </button>
             </div>
-
             {mediaMessage && (
               <p className="text-sm text-gray-600">{mediaMessage}</p>
+            )}
+            {instagramMessage && (
+              <p className="text-sm text-gray-600">{instagramMessage}</p>
             )}
           </div>
         </section>
