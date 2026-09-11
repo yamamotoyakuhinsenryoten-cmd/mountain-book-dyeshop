@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { WorkLog, ExperienceLog } from "@/data/logs/types";
+import { getMediaUrl } from "@/lib/media";
 
 const ACCESS_TOKEN = process.env.INSTAGRAM_ACCESS_TOKEN ?? "";
 
@@ -157,9 +158,9 @@ export async function POST(request: Request) {
 
     const images = log.media
       .filter((media) => media.type === "image")
-      .slice(0, 2)
+      .slice(0, 10)
       .map((media) => ({
-        url: `https://mountain-book-dyeshop.vercel.app${media.src}`,
+        url: getMediaUrl(media.src),
         caption: media.caption ?? "",
       }));
 
