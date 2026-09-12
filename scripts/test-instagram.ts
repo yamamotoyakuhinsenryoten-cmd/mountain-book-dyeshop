@@ -15,15 +15,12 @@ const BASE_URL = `https://graph.instagram.com/${API_VERSION}`;
 const images = [
   {
     url: "https://mountain-book-dyeshop.vercel.app/logs/baisen-001/IMG_1847.jpg",
-    caption: "生豆：ニカラグア\n生豆重量：151g",
   },
   {
     url: "https://mountain-book-dyeshop.vercel.app/logs/baisen-001/IMG_1848.jpg",
-    caption: "焙煎：1ハゼ後まで\n焙煎時間：○○分",
   },
   {
     url: "https://mountain-book-dyeshop.vercel.app/logs/baisen-001/IMG_1849.jpg",
-    caption: "焙煎後重量：147g\n重量減少率：○○%",
   },
 ];
 
@@ -119,14 +116,10 @@ async function main() {
   for (const [index, image] of images.entries()) {
     console.log(`Creating child container ${index + 1}...`);
     console.log(`Image: ${image.url}`);
-    console.log(`Caption: ${image.caption}`);
 
     const result = await api(`/${userId}/media`, {
       image_url: image.url,
       is_carousel_item: "true",
-
-      // ★ 今回の実験ポイント
-      caption: image.caption,
 
       access_token: ACCESS_TOKEN!,
     });
