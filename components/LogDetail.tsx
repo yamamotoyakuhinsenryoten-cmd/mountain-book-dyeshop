@@ -105,7 +105,7 @@ export default function LogDetail({ log }: Props) {
                     alt={item.caption ?? ""}
                     width={800}
                     height={600}
-                    className="w-full h-auto"
+                    className="h-auto"
                   />
                   {item.caption && <p>{item.caption}</p>}
                 </div>
