@@ -53,6 +53,7 @@ import { mbdyeshop009 } from "./development/mb-dyeshop-009";
 import { baisen013 } from "./work/baisen-013";
 import { baisen014 } from "./work/baisen-014";
 import { mbdyeshop010 } from "./development/mb-dyeshop-010";
+import { aungcoffee001 } from "./experience/aungcoffee-001";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -109,4 +110,5 @@ export const logs: Log[] = [
   baisen013,
   baisen014,
   mbdyeshop010,
+  aungcoffee001,
 ];
