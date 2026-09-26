@@ -5,7 +5,7 @@ export const livecoffee001 = {
   type: "experience",
   createdAt: "2026-09-27",
 
-  title: "ライブコーヒー吉祥寺訪問",
+  title: "ライブコーヒー＠吉祥寺",
   category: "コーヒー店",
   details: [
     { label: "店名", value: "ライブコーヒー＠吉祥寺" },
@@ -16,9 +16,19 @@ export const livecoffee001 = {
     { label: "標高", value: "" },
     { label: "テイスティングノート", value: "" },
     { label: "ドリップ方法", value: "マシンドリップ" },
-    { label: "店の印象", value: "豆屋さんにコーヒースタンドが併設されている感じ" },
-    { label: "豆の販売", value: "豆の種類が豊富。200gでだいたい1,500〜2,000円くらい" },
-    { label: "メニュー", value: "ブレンドはプレミアムブレンドを使用。店内利用はテイクアウト価格にプラス50円" },
+    {
+      label: "店の印象",
+      value: "豆屋さんにコーヒースタンドが併設されている感じ",
+    },
+    {
+      label: "豆の販売",
+      value: "豆の種類が豊富。200gでだいたい1,500〜2,000円くらい",
+    },
+    {
+      label: "メニュー",
+      value:
+        "ブレンドはプレミアムブレンドを使用。店内利用はテイクアウト価格にプラス50円",
+    },
     { label: "その他", value: "テイクアウトで利用" },
   ],
 
@@ -48,7 +58,7 @@ export const livecoffee001 = {
       type: "video",
       src: "/logs/livecoffee-001/vid/IMG_3474.MOV",
       caption: "",
-    }
+    },
   ],
 
   source: {
