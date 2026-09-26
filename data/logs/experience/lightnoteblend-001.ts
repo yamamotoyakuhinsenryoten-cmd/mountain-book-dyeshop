@@ -5,14 +5,14 @@ export const lightnoteblend001 = {
   type: "experience",
   createdAt: "2026-09-07",
 
-  title: "ライトノートブレンド",
+  title: "ライトノートブレンド@スターバックス",
   category: "コーヒー豆",
   details: [
     { label: "名前", value: "ライトノート ブレンド" },
     { label: "購入店", value: "スターバックス" },
     { label: "価格", value: "250g 約1,400円" },
     { label: "豆", value: "ブラジル、ニカラグア" },
-    { label: "焙煎度", value: "浅煎り" },
+    { label: "焙煎度", value: "中煎り" },
     {
       label: "印象",
       value:

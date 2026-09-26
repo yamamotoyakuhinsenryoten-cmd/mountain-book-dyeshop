@@ -5,10 +5,11 @@ export const sirensblend001 = {
   type: "experience",
   createdAt: "2026-08-19",
 
-  title: "サイレン ブレンド #1",
+  title: "サイレン ブレンド@スターバックス",
   category: "コーヒー豆",
   details: [
-    { label: "商品", value: "スターバックス サイレン ブレンド" },
+    { label: "商品", value: "サイレン ブレンド" },
+    { label: "購入店", value: "スターバックス" },
     { label: "価格", value: "250g 1,590円" },
     { label: "焙煎表記", value: "ライト" },
     {

@@ -5,16 +5,20 @@ export const darkroast1971001 = {
   type: "experience",
   createdAt: "2026-09-17",
 
-  title: "スターバックス 1971 ダーク ロースト",
+  title: "1971 ダーク ロースト@スターバックス",
   category: "コーヒー豆",
 
   details: [
-    { label: "名前", value: "スターバックス 1971 ダーク ロースト" },
+    { label: "名前", value: "1971 ダーク ロースト" },
     { label: "購入店", value: "スターバックス" },
     { label: "価格", value: "250g 1,880円" },
     { label: "豆", value: "インドネシア、コロンビア、ブラジル" },
     { label: "焙煎度", value: "深煎り" },
-    { label: "印象", value: "深煎りらしい苦味と香ばしさがあり、カラメルのような甘い香りも感じる。ベロナなど他のスターバックスの深煎りと比べて素直な味わい。" },
+    {
+      label: "印象",
+      value:
+        "深煎りらしい苦味と香ばしさがあり、カラメルのような甘い香りも感じる。ベロナなど他のスターバックスの深煎りと比べて素直な味わい。",
+    },
   ],
 
   insights: [
@@ -77,7 +81,7 @@ export const darkroast1971001 = {
       type: "image",
       src: "/logs/darkroast1971-001/img/IMG_3346.jpg",
       caption: "",
-    }
+    },
   ],
 
   source: {
