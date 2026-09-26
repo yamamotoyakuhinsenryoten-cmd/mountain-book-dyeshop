@@ -60,6 +60,7 @@ import { arohaladies001 } from "./work/aroha-ladies-001";
 import { coffeestyleucc001 } from "./experience/coffeestyle-ucc-001";
 import { allseasonscoffee002 } from "./experience/all-seasons-coffee-002";
 import { komedacoffee001 } from "./experience/komeda-coffee-001";
+import { shinkirocoffee002 } from "./experience/shinkirocoffee-002";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -123,4 +124,5 @@ export const logs: Log[] = [
   coffeestyleucc001,
   allseasonscoffee002,
   komedacoffee001,
+  shinkirocoffee002,
 ];
