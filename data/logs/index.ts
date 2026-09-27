@@ -65,6 +65,7 @@ import { livecoffee001 } from "./experience/livecoffee-001";
 import { mermaidcoffee001 } from "./experience/mermaidcoffee-001";
 import { pumainemame001 } from "./experience/puma-inemame-001";
 import { mamaminainemame001 } from "./experience/mamamina-inemame-001";
+import { mbdyeshop011 } from "./development/mb-dyeshop-011";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -133,4 +134,5 @@ export const logs: Log[] = [
   mermaidcoffee001,
   pumainemame001,
   mamaminainemame001,
+  mbdyeshop011,
 ];
