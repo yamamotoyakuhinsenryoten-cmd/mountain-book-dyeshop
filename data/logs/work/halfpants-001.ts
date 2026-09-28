@@ -4,7 +4,7 @@ export const halfpants001: Log = {
   slug: "halfpants-001",
   type: "work",
   createdAt: "2026-07-12",
-  title: "ハーフパンツ #1",
+  title: "子ども用ハーフパンツ #1",
   category: "縫物",
   details: [
     {

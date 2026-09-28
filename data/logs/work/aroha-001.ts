@@ -4,7 +4,7 @@ export const aroha001: Log = {
   slug: "aroha-001",
   type: "work",
   createdAt: "2026-06-29",
-  title: "アロハシャツ #1",
+  title: "子供用アロハシャツ #1",
   category: "縫物",
   details: [
     {

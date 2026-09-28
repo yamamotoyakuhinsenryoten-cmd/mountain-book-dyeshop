@@ -5,7 +5,7 @@ export const coffeestyleucc001: Log = {
   type: "experience",
   createdAt: "2026-09-21",
 
-  title: "COFFEE STYLE UCC@吉祥寺アトレ",
+  title: "COFFEE STYLE UCC(吉祥寺アトレ) #1",
   category: "コーヒー店",
 
   details: [

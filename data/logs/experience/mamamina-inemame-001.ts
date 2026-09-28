@@ -5,7 +5,7 @@ export const mamaminainemame001 = {
   type: "experience",
   createdAt: "2026-09-28",
 
-  title: "ママミナ@イネマメ",
+  title: "ママミナ(イネマメ)",
   category: "コーヒー豆",
 
   details: [
@@ -51,7 +51,7 @@ export const mamaminainemame001 = {
       type: "image",
       src: "/logs/mamamina-inemame-001/img/IMG_3491.jpg",
       caption: "",
-    }
+    },
   ],
 
   source: {

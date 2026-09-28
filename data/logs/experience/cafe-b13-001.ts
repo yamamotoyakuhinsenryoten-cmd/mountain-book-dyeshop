@@ -5,7 +5,7 @@ export const cafeb13001 = {
   type: "experience",
   createdAt: "2026-09-01",
 
-  title: "Cafe B13＠千歳烏山",
+  title: "Cafe B13(千歳烏山) #1",
   category: "コーヒー店",
   details: [
     { label: "店名", value: "Cafe B13＠千歳烏山" },

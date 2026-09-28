@@ -5,7 +5,7 @@ export const livecoffee001 = {
   type: "experience",
   createdAt: "2026-09-27",
 
-  title: "ライブコーヒー＠吉祥寺",
+  title: "ライブコーヒー(吉祥寺) #1",
   category: "コーヒー店",
   details: [
     { label: "店名", value: "ライブコーヒー＠吉祥寺" },

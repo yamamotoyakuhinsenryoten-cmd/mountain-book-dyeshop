@@ -5,7 +5,7 @@ export const aungcoffee001 = {
   type: "experience",
   createdAt: "2026-09-13",
 
-  title: "AUNG COFFEE＠新宿御苑前",
+  title: "AUNG COFFEE(新宿御苑前) #1",
   category: "コーヒー店",
 
   details: [
@@ -74,7 +74,7 @@ export const aungcoffee001 = {
       type: "video",
       src: "/logs/aungcoffee-001/vid/IMG_3327.MOV",
       caption: "",
-    }
+    },
   ],
 
   source: {

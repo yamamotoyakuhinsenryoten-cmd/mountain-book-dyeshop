@@ -5,7 +5,7 @@ export const shinkirocoffee001 = {
   type: "experience",
   createdAt: "2026-09-07",
 
-  title: "蜃気楼珈琲＠富士見ヶ丘",
+  title: "蜃気楼珈琲(富士見ヶ丘) #1",
   category: "コーヒー店",
   details: [
     { label: "店名", value: "蜃気楼珈琲＠富士見ヶ丘" },

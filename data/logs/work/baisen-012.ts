@@ -5,7 +5,7 @@ export const baisen012 = {
   type: "work",
   createdAt: "2026-09-01",
 
-  title: "手鍋焙煎 #12|ニカラグア サンタアナ農園 SHG|中煎り",
+  title: "ニカラグア サンタアナ農園 SHG #1｜手鍋焙煎 ｜中煎り",
   category: "焙煎",
 
   details: [

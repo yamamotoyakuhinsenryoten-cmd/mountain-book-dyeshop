@@ -4,7 +4,7 @@ export const covertcoffee001 = {
   type: "experience",
   createdAt: "2026-07-24",
 
-  title: "COVERT COFFEE（新宿）",
+  title: "COVERT COFFEE(新宿) #1",
   category: "コーヒー店",
   details: [
     {

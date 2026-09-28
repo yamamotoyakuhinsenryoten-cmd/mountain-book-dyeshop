@@ -5,7 +5,7 @@ export const darkroast1971001 = {
   type: "experience",
   createdAt: "2026-09-17",
 
-  title: "1971 ダーク ロースト@スターバックス",
+  title: "1971 ダーク ロースト(スターバックス)",
   category: "コーヒー豆",
 
   details: [

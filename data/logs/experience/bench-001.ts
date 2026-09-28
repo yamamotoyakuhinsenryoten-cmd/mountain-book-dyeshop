@@ -5,7 +5,7 @@ export const bench001 = {
   type: "experience",
   createdAt: "2026-08-19",
 
-  title: "the BENCH コーヒースタンド(千歳烏山)#1",
+  title: "the BENCH コーヒースタンド(千歳烏山) #1",
   category: "コーヒー店",
   details: [
     { label: "訪問日", value: "2026/8/14" },

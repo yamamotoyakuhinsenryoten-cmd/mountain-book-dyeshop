@@ -4,7 +4,7 @@ export const makuracover001: Log = {
   slug: "makuracover-001",
   type: "work",
   createdAt: "2026-05-19",
-  title: "枕カバーづくり #1",
+  title: "枕カバー #1",
   category: "縫物",
   details: [
     {

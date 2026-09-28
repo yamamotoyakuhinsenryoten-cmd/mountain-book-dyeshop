@@ -5,7 +5,7 @@ export const sirensblend001 = {
   type: "experience",
   createdAt: "2026-08-19",
 
-  title: "サイレン ブレンド@スターバックス",
+  title: "サイレン ブレンド(スターバックス)",
   category: "コーヒー豆",
   details: [
     { label: "商品", value: "サイレン ブレンド" },

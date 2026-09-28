@@ -45,7 +45,7 @@ export const komedacoffee001 = {
       type: "image",
       src: "/logs/komeda-coffee-001/img/IMG_3404.jpg",
       caption: "",
-    }
+    },
   ],
 
   source: {

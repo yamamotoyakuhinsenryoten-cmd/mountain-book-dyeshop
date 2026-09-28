@@ -5,7 +5,7 @@ export const tamanegisome001 = {
   type: "work",
   createdAt: "2026-08-19",
 
-  title: "玉ねぎ染め #1",
+  title: "玉ねぎ染め #1 | シーチング",
   category: "染物",
   details: [
     { label: "生地", value: "シーチング 1m × 1m、174g" },

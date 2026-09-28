@@ -5,7 +5,7 @@ export const fukueicoffee001 = {
   type: "experience",
   createdAt: "2026-09-06",
 
-  title: "富久栄珈琲＠新宿マルイ",
+  title: "富久栄珈琲(新宿マルイ) #1",
   category: "コーヒー店",
   details: [
     { label: "店名", value: "富久栄珈琲＠新宿マルイ" },

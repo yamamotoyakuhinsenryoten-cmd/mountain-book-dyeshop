@@ -5,7 +5,7 @@ export const pumainemame001 = {
   type: "experience",
   createdAt: "2026-09-27",
 
-  title: "グァテマラ・カフェピューマ@イネマメ",
+  title: "グァテマラ・カフェピューマ(イネマメ)",
   category: "コーヒー豆",
 
   details: [

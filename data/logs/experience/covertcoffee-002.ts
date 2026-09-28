@@ -5,7 +5,7 @@ export const covertcoffee002 = {
   type: "experience",
   createdAt: "2026-08-23",
 
-  title: "COVERT COFFEE #2 | パナマ・ゲイシャ",
+  title: "COVERT COFFEE(新宿) #2 | パナマ・ゲイシャ",
   category: "コーヒー店",
 
   details: [

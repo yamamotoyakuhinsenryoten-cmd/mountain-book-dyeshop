@@ -4,7 +4,7 @@ export const allseasonscoffee001 = {
   slug: "all-seasons-coffee-001",
   type: "experience",
   createdAt: "2026-08-11",
-  title: "ALL SEASONS COFFEE（新宿御苑）",
+  title: "ALL SEASONS COFFEE(新宿御苑) #1",
   category: "コーヒー店",
 
   details: [

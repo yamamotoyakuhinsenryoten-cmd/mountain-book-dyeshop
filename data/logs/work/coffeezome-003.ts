@@ -4,7 +4,7 @@ export const coffeezome003: Log = {
   slug: "coffeezome-003",
   type: "work",
   createdAt: "2026-06-22",
-  title: "コーヒー染め #3",
+  title: "コーヒー染め #3 | Wガーゼ",
   category: "染物",
   details: [
     {

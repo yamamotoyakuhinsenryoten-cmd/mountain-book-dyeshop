@@ -5,7 +5,7 @@ export const lightnoteblend001 = {
   type: "experience",
   createdAt: "2026-09-07",
 
-  title: "ライトノートブレンド@スターバックス",
+  title: "ライトノートブレンド(スターバックス)",
   category: "コーヒー豆",
   details: [
     { label: "名前", value: "ライトノート ブレンド" },

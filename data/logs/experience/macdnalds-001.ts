@@ -5,7 +5,7 @@ export const macdnalds001 = {
   type: "experience",
   createdAt: "2026-09-17",
 
-  title: "マクドナルド プレミアムローストコーヒー",
+  title: "マクドナルド プレミアムローストコーヒー #1",
   category: "コーヒー店",
 
   details: [

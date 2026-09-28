@@ -5,7 +5,7 @@ export const baisen013: Log = {
   type: "work",
   createdAt: "2026-09-11",
 
-  title: "手鍋焙煎 #13|ニカラグア サンタアナ農園 SHG|中深煎り",
+  title: "ニカラグア サンタアナ農園 SHG #2｜手鍋焙煎 ｜中深煎り",
   category: "焙煎",
 
   details: [

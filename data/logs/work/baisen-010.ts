@@ -5,7 +5,7 @@ export const baisen010 = {
   type: "work",
   createdAt: "2026-08-11",
 
-  title: "手鍋焙煎 #10|ブラジル S18 No.2|深煎り",
+  title: "ブラジル S18 No.2 #10｜手鍋焙煎 ｜深煎り",
   category: "焙煎",
   details: [
     { label: "豆", value: "ブラジル S18 No.2" },

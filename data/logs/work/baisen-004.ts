@@ -4,7 +4,7 @@ export const baisen004: Log = {
   slug: "baisen-004",
   type: "work",
   createdAt: "2026-06-09",
-  title: "手鍋焙煎 #4",
+  title: "ブラジル S18 No.2 #4｜手鍋焙煎",
   category: "焙煎",
   details: [
     {

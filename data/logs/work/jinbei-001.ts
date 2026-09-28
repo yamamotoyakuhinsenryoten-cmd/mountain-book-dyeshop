@@ -4,7 +4,7 @@ export const jinbei001: Log = {
   slug: "jinbei-001",
   type: "work",
   createdAt: "2026-06-29",
-  title: "甚平づくり #1",
+  title: "子ども用甚平づくり #1",
   category: "縫物",
   details: [
     {

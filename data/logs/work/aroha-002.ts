@@ -5,7 +5,7 @@ export const aroha002 = {
   type: "work",
   createdAt: "2026-08-11",
 
-  title: "アロハシャツ作成 #2",
+  title: "子供用アロハシャツ #2 ",
   category: "縫物",
   details: [
     { label: "サイズ", value: "100サイズ" },

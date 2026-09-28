@@ -5,7 +5,7 @@ export const makuracover002 = {
   type: "work",
   createdAt: "2026-07-23",
 
-  title: "枕カバーづくり #2",
+  title: "枕カバー #2",
   category: "縫物",
   details: [
     { label: "生地", value: "自分で染めたダブルガーゼ" },
