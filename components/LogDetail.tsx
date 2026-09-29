@@ -12,7 +12,19 @@ export default function LogDetail({ log }: Props) {
       <div className="back-link">
         <a href="/logs">← Logs</a>
       </div>
+      {log.type === "work" && log.approach && (
+        <section>
+          <h2>Approach / 方針</h2>
+          <p className="whitespace-pre-line">{log.approach}</p>
+        </section>
+      )}
 
+      {log.type === "work" && log.result && (
+        <section>
+          <h2>Result / 結果</h2>
+          <p className="whitespace-pre-line">{log.result}</p>
+        </section>
+      )}
       {(log.type === "work" || log.type === "experience") && (
         <section>
           <h2>Info / 基本情報</h2>
@@ -39,6 +51,18 @@ export default function LogDetail({ log }: Props) {
             </ul>
           </section>
         )}
+
+      {log.type === "work" && log.next && log.next.length > 0 && (
+        <section>
+          <h2>Next Steps / 次のステップ</h2>
+
+          <ul className="list-disc pl-5">
+            {log.next.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {log.type === "development" && (
         <>

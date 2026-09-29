@@ -30,8 +30,11 @@ type BaseLog = {
 
 export type WorkLog = BaseLog & {
   type: "work";
+  approach?: string;
+  result?: string;
   details: { label: string; value: string }[];
   insights: string[];
+  next?: string[];
 };
 
 export type ExperienceLog = BaseLog & {
