@@ -98,16 +98,6 @@ export const baisen015: Log = {
       src: "/logs/baisen-015/img/IMG_3559.jpg",
       caption: "",
     },
-    // {
-    //   type: "image",
-    //   src: "/logs/baisen-015/img/IMG_3563.jpg",
-    //   caption: "",
-    // },
-    {
-      type: "image",
-      src: "/logs/baisen-015/img/IMG_3564.jpg",
-      caption: "",
-    },
   ],
 
   source: {
