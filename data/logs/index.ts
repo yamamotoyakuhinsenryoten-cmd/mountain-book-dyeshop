@@ -72,6 +72,7 @@ import { worktable001 } from "./development/worktable-001";
 import { mermaidcoffee003 } from "./experience/mermaidcoffee-003";
 import { eightcoffee001 } from "./experience/eight-coffee-001";
 
+import { standcollarshirt001 } from "./work/standcollar-shirt-001";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -146,4 +147,5 @@ export const logs: Log[] = [
   worktable001,
   mermaidcoffee003,
   eightcoffee001,
+  standcollarshirt001,
 ];
