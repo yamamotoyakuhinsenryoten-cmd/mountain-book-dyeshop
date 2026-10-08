@@ -100,7 +100,7 @@ async function loadLog(
   logType: "work" | "experience",
   slug: string,
 ): Promise<InstagramLog> {
-  const exportName = slug.replace(/-([0-9]+)$/, "$1");
+  const exportName = slug.replace(/-/g, "");
 
   const module = await import(`@/data/logs/${logType}/${slug}.ts`);
 

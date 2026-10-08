@@ -1,6 +1,6 @@
 import type { Log } from "../types";
 
-export const mermaidcoffee003: Log = {
+export const mermaidcoffee003 = {
   slug: "mermaidcoffee-003",
   type: "experience",
   createdAt: "2026-10-07",
@@ -12,10 +12,17 @@ export const mermaidcoffee003: Log = {
     { label: "店名", value: "マーメイドコーヒー(明大前)" },
     { label: "訪問日時", value: "2026/10/7" },
     { label: "オーダー", value: "ハンドドリップ（900円）、クッキー（250円）" },
-    { label: "豆", value: "コスタリカ コルディジェーラ・マイクロミル ウエストバレー（サンラモン） カトゥアイ、カトゥーラ" },
+    {
+      label: "豆",
+      value:
+        "コスタリカ コルディジェーラ・マイクロミル ウエストバレー（サンラモン） カトゥアイ、カトゥーラ",
+    },
     { label: "精製方法", value: "アナエロビックナチュラル" },
     { label: "標高", value: "1450m" },
-    { label: "テイスティングノート", value: "アップルパイ、ローストナッツ、シナモン" },
+    {
+      label: "テイスティングノート",
+      value: "アップルパイ、ローストナッツ、シナモン",
+    },
     { label: "ドリップ方法", value: "ハンドドリップ" },
     { label: "店カテゴリ", value: "" },
     { label: "店の規模", value: "" },
@@ -57,7 +64,7 @@ export const mermaidcoffee003: Log = {
       type: "image",
       src: "/logs/mermaidcoffee-003/img/IMG_3615.jpg",
       caption: "",
-    }
+    },
   ],
 
   source: {
@@ -69,7 +76,8 @@ export const mermaidcoffee003: Log = {
   related: [
     {
       kind: "external",
-      title: "コスタリカ コルディジェーラ・マイクロミル アナエロビックナチュラル",
+      title:
+        "コスタリカ コルディジェーラ・マイクロミル アナエロビックナチュラル",
       url: "https://mermaid-coffee-roasters.com/items/67caa719e7d722e766a78cdd",
     },
   ],
