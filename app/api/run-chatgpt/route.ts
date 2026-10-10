@@ -106,8 +106,7 @@ export async function POST(request: Request) {
     // ============================================================
 
     const editable = page.locator(
-      'div#prompt-textarea[contenteditable="true"], ' +
-        'div#prompt-textarea[contenteditable="plaintext-only"]',
+      'div.ProseMirror[contenteditable="true"][role="textbox"]',
     );
 
     await editable.waitFor({
@@ -170,7 +169,8 @@ export async function POST(request: Request) {
     // 「回答を停止」ボタンはUI変更で存在しない場合があるため、
     // 必須条件にはしない。
     const stopButton = page.locator(
-      'button[aria-label="回答を停止"], ' +
+      'button[aria-label="停止"], ' +
+        'button[aria-label="回答を停止"], ' +
         'button[aria-label="Stop generating"]',
     );
 
@@ -196,27 +196,16 @@ export async function POST(request: Request) {
     // 回答取得
     // ============================================================
 
-    const answers = page.locator('[data-message-author-role="assistant"]');
+    const answerCode = page.locator(
+      '[data-markdown-copy="code-block"] pre code',
+    );
 
-    await answers.last().waitFor({
+    await answerCode.last().waitFor({
       state: "visible",
-      timeout: 120000,
+      timeout: 30000,
     });
 
-    // 回答内容が安定するまで待つ
-    let answer = "";
-
-    for (let i = 0; i < 30; i++) {
-      const currentAnswer = await answers.last().innerText();
-
-      if (currentAnswer.trim() && currentAnswer === answer) {
-        break;
-      }
-
-      answer = currentAnswer;
-
-      await page.waitForTimeout(1000);
-    }
+    const answer = await answerCode.last().innerText();
 
     if (!answer.trim()) {
       throw new Error("ChatGPTから回答を取得できませんでした");
