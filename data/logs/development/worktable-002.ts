@@ -6,7 +6,7 @@ export const worktable002 = {
   createdAt: "2026-10-10",
   title:
     "Worktable #2 | 過去ログ検索と参照元リンクの実装、コンテキスト設計の検討",
-  category: "AI",
+  category: "Worktable",
 
   media: [],
 

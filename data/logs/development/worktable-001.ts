@@ -5,7 +5,7 @@ export const worktable001 = {
   type: "development",
   createdAt: "2026-10-08",
   title: "Worktable開発 #1 | 自前の作業チャットを作る",
-  category: "Webサイト構築",
+  category: "Worktable",
 
   media: [],
 
