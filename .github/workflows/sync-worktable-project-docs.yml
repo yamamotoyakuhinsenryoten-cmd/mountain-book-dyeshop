@@ -1,0 +1,97 @@
+name: Sync project documents to Worktable
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - docs/design.md
+      - docs/dev_history.md
+      - .github/workflows/sync-worktable-project-docs.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-worktable-project-docs
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Validate source documents
+        id: validate
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in docs/design.md docs/dev_history.md; do
+            if [[ ! -s "$file" ]]; then
+              echo "Required source document is missing or empty: $file" >&2
+              exit 1
+            fi
+          done
+          echo "source_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Create Worktable installation token
+        id: worktable-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.WORKTABLE_SYNC_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WORKTABLE_SYNC_APP_PRIVATE_KEY }}
+          owner: yamamotoyakuhinsenryoten-cmd
+          repositories: worktable
+          permission-contents: write
+
+      - name: Check out Worktable
+        uses: actions/checkout@v4
+        with:
+          repository: yamamotoyakuhinsenryoten-cmd/worktable
+          ref: main
+          token: ${{ steps.worktable-token.outputs.token }}
+          path: worktable
+
+      - name: Copy and commit changed documents
+        id: sync
+        shell: bash
+        env:
+          SOURCE_SHA: ${{ steps.validate.outputs.source_sha }}
+        run: |
+          set -euo pipefail
+          destination="worktable/project-context/website-development/docs"
+          mkdir -p "$destination"
+          install -m 0644 docs/design.md "$destination/design.md"
+          install -m 0644 docs/dev_history.md "$destination/dev_history.md"
+          cd worktable
+          git add -- project-context/website-development/docs/design.md project-context/website-development/docs/dev_history.md
+          if git diff --cached --quiet -- project-context/website-development/docs/design.md project-context/website-development/docs/dev_history.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No document changes; no commit created." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync project docs from mountain-book-dyeshop" -m "Source commit: ${SOURCE_SHA}"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Updated Worktable from source commit \`${SOURCE_SHA}\`." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Record source revision
+        if: always()
+        env:
+          SOURCE_SHA: ${{ steps.validate.outputs.source_sha }}
+          SYNC_OUTCOME: ${{ steps.sync.outcome }}
+          SYNC_CHANGED: ${{ steps.sync.outputs.changed }}
+        run: |
+          {
+            echo "## Worktable document sync"
+            echo "- Source: \`${GITHUB_REPOSITORY}@${SOURCE_SHA}\`"
+            echo "- Outcome: ${SYNC_OUTCOME:-not reached}"
+            echo "- Worktable changed: ${SYNC_CHANGED:-unknown}"
+          } >> "$GITHUB_STEP_SUMMARY"
