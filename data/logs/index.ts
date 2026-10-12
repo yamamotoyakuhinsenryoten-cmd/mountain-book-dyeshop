@@ -76,6 +76,7 @@ import { standcollarshirt001 } from "./work/standcollar-shirt-001";
 import { worktable002 } from "./development/worktable-002";
 import { worktable003 } from "./development/worktable-003";
 import { baisen016 } from "./work/baisen-016";
+import { worktable004 } from "./development/worktable-004";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -154,4 +155,5 @@ export const logs: Log[] = [
   worktable002,
   worktable003,
   baisen016,
+  worktable004,
 ];

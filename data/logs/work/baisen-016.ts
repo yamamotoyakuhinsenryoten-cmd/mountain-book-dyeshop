@@ -5,7 +5,7 @@ export const baisen016: Log = {
   type: "work",
   createdAt: "2026-10-12",
 
-  title: "ニカラグア サンタアナ農園 SHG #16｜手鍋焙煎｜中煎り",
+  title: "ニカラグア サンタアナ農園 SHG #4｜手鍋焙煎｜中煎り",
   category: "焙煎",
 
   approach:
@@ -95,7 +95,7 @@ export const baisen016: Log = {
   related: [
     {
       kind: "external",
-      title: "YouTube動画：ニカラグア サンタアナ農園 SHG #16｜手鍋焙煎｜中煎り",
+      title: "YouTube動画：ニカラグア サンタアナ農園 SHG #4｜手鍋焙煎｜中煎り",
       url: "https://youtu.be/7AiExJ91z1E",
     },
   ],
