@@ -79,6 +79,8 @@ import { baisen016 } from "./work/baisen-016";
 import { worktable004 } from "./development/worktable-004";
 import { kannocoffee001 } from "./experience/kanno-coffee-001";
 
+import { sumatramasadepan001 } from "./experience/sumatra-masa-depan-001";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -159,4 +161,5 @@ export const logs: Log[] = [
   baisen016,
   worktable004,
   kannocoffee001,
+  sumatramasadepan001,
 ];
