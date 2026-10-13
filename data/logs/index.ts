@@ -84,6 +84,7 @@ import { sumatramasadepan001 } from "./experience/sumatra-masa-depan-001";
 import { sarutahikocoffee001 } from "./experience/sarutahiko-coffee-001";
 
 import { worktable005 } from "./development/worktable-005";
+import { worktable006 } from "./development/worktable-006";
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -167,4 +168,5 @@ export const logs: Log[] = [
   sumatramasadepan001,
   sarutahikocoffee001,
   worktable005,
+  worktable006,
 ];
