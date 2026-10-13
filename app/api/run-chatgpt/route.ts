@@ -105,14 +105,25 @@ export async function POST(request: Request) {
     // ChatGPTの入力欄
     // ============================================================
 
-    const editable = page.locator(
-      'div.ProseMirror[contenteditable="true"][role="textbox"]',
-    );
+    // ChatGPTの入力欄だけを指定する
+    const editable = page.getByRole("textbox", {
+      name: "ChatGPT に聞く",
+      exact: true,
+    });
 
+    // 入力欄が1つだけ見つかったことを確認する
     await editable.waitFor({
       state: "visible",
       timeout: 30000,
     });
+
+    const editableCount = await editable.count();
+
+    if (editableCount !== 1) {
+      throw new Error(
+        `ChatGPT入力欄を一意に特定できません。検出数: ${editableCount}`,
+      );
+    }
 
     console.log("ChatGPT入力欄を確認しました");
 
@@ -122,14 +133,7 @@ export async function POST(request: Request) {
     // ============================================================
     // プロンプト入力
     // ============================================================
-    //
-    // keyboard.type() / keyboard.insertText() は、
-    // ChatGPT側のComposerでMarkdownの自動整形や
-    // 改行の扱いに影響する可能性がある。
-    //
-    // fill()ならEnterキーを発生させず、
-    // 改行を含む文字列を一度に入力できる。
-    //
+
     await editable.fill(prompt);
 
     console.log("ChatGPTにプロンプトを入力しました");
