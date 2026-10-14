@@ -85,6 +85,8 @@ import { sarutahikocoffee001 } from "./experience/sarutahiko-coffee-001";
 
 import { worktable005 } from "./development/worktable-005";
 import { worktable006 } from "./development/worktable-006";
+import { worktable007 } from "./development/worktable-007";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -169,4 +171,5 @@ export const logs: Log[] = [
   sarutahikocoffee001,
   worktable005,
   worktable006,
+  worktable007,
 ];
