@@ -87,6 +87,8 @@ import { worktable005 } from "./development/worktable-005";
 import { worktable006 } from "./development/worktable-006";
 import { worktable007 } from "./development/worktable-007";
 
+import { worktable008 } from "./development/worktable-008";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -172,4 +174,5 @@ export const logs: Log[] = [
   worktable005,
   worktable006,
   worktable007,
+  worktable008,
 ];
