@@ -93,6 +93,8 @@ import { worktable009 } from "./development/worktable-009";
 
 import { worktable010 } from "./development/worktable-010";
 
+import { baisen017 } from "./work/baisen-017";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -181,4 +183,5 @@ export const logs: Log[] = [
   worktable008,
   worktable009,
   worktable010,
+  baisen017,
 ];
