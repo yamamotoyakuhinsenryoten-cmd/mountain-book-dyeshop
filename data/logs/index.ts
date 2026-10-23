@@ -97,6 +97,8 @@ import { baisen017 } from "./work/baisen-017";
 
 import { oncacoffee001 } from "./experience/onca-coffee-001";
 
+import { vervecoffeeroasters001 } from "./experience/verve-coffee-roasters-001";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -187,4 +189,5 @@ export const logs: Log[] = [
   worktable010,
   baisen017,
   oncacoffee001,
+  vervecoffeeroasters001,
 ];
