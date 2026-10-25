@@ -99,6 +99,8 @@ import { oncacoffee001 } from "./experience/onca-coffee-001";
 
 import { vervecoffeeroasters001 } from "./experience/verve-coffee-roasters-001";
 
+import { baisen018 } from "./work/baisen-018";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -190,4 +192,5 @@ export const logs: Log[] = [
   baisen017,
   oncacoffee001,
   vervecoffeeroasters001,
+  baisen018,
 ];
