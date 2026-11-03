@@ -105,6 +105,8 @@ import { seven001 } from "./experience/seven-001";
 
 import { yoshicoffee001 } from "./experience/yoshi-coffee-001";
 
+import { uniqlocoffee001 } from "./experience/uniqlo-coffee-001";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -199,4 +201,5 @@ export const logs: Log[] = [
   baisen018,
   seven001,
   yoshicoffee001,
+  uniqlocoffee001,
 ];
