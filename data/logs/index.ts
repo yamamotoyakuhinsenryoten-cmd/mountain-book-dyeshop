@@ -115,6 +115,8 @@ import { veloce001 } from "./experience/veloce-001";
 
 import { baisen019 } from "./work/baisen-019";
 
+import { baisen020 } from "./work/baisen-020";
+
 import { Log } from "./types";
 
 export const logs: Log[] = [
@@ -214,4 +216,5 @@ export const logs: Log[] = [
   seven002,
   veloce001,
   baisen019,
+  baisen020,
 ];
