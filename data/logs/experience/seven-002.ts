@@ -5,35 +5,23 @@ export const seven002 = {
   "type": "experience",
   "createdAt": "2026-11-20",
   "title": "セブンイレブン #2",
-  "category": "コーヒー豆",
+  "category": "コーヒー店",
   "related": [],
   "details": [
     {
-      "label": "名前",
-      "value": "セレクトブレンド"
+      "label": "店名",
+      "value": "セブンイレブン"
     },
     {
-      "label": "購入店",
-      "value": "セブン"
+      "label": "訪問日時",
+      "value": "2026/11/16"
     },
     {
-      "label": "価格",
-      "value": "約170円"
+      "label": "オーダー",
+      "value": "セレクトブレンド(コロンビア)"
     },
     {
-      "label": "ブレンド",
-      "value": "ブレンド"
-    },
-    {
-      "label": "産地",
-      "value": "コロンビア"
-    },
-    {
-      "label": "農園",
-      "value": ""
-    },
-    {
-      "label": "品種",
+      "label": "豆",
       "value": ""
     },
     {
@@ -45,15 +33,35 @@ export const seven002 = {
       "value": ""
     },
     {
-      "label": "グレード",
+      "label": "テイスティングノート",
       "value": ""
     },
     {
-      "label": "焙煎度",
+      "label": "ドリップ方法",
       "value": ""
     },
     {
-      "label": "好みの抽出方法",
+      "label": "店カテゴリ",
+      "value": "その他"
+    },
+    {
+      "label": "店の規模",
+      "value": "小"
+    },
+    {
+      "label": "豆の販売",
+      "value": "なし"
+    },
+    {
+      "label": "店内利用",
+      "value": ""
+    },
+    {
+      "label": "テイクアウト",
+      "value": ""
+    },
+    {
+      "label": "メニュー",
       "value": ""
     }
   ],
@@ -61,11 +69,6 @@ export const seven002 = {
     "セブンブレンドとは違い、ストレートコーヒーを飲んでいるような感じ",
     "いやな後味がなく、わずかに酸味寄りで飲みやすいが、飲みごたえもある。おいしい。"
   ],
-  "source": {
-    "title": "生成元チャット",
-    "service": "Worktable",
-    "url": ""
-  },
   media: [
     {
       type: "image",
@@ -77,5 +80,10 @@ export const seven002 = {
       src: "/logs/seven-002/img/IMG_4711.jpg",
       caption: "",
     }
-  ]
+  ],
+  "source": {
+    "title": "生成元チャット",
+    "service": "Worktable",
+    "url": ""
+  }
 } satisfies Log;
